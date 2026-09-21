@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 11 · 和弦配调式：给伴奏挑对的音阶</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="lesson-header">
+    <div class="kicker">Unit E · 调式与色彩 · Lesson 11 / 13</div>
+    <h1>和弦配调式：给伴奏挑对的音阶</h1>
+    <p class="subtitle">这是 Unit E 最后一课，把音阶、和弦这两条线正式合并：拿到一个和弦，该弹哪个调式即兴或写旋律。</p>
+  </header>
+
+  <nav class="crumbs">上一课：<a href="0010-seven-modes.html">七种调式与特征音</a> ・ 参考卡：<a href="../reference/0010-chord-scale-matching.html">和弦配调式</a></nav>
+
+  <h2>方法：和弦决定"当下能用哪些音"</h2>
+  <p>
+    调式音阶不是拿来单独背的，是拿来配和弦用的：和弦响着的时候，选一个"属于"这个和弦的调式来即兴或写旋律，听感会自然贴合；选错调式，就算音符技术上没弹错，也会有种"隔着一层"的别扭感。
+  </p>
+
+  <h2>你已经解锁的三组配对</h2>
+  <table>
+    <thead><tr><th>和弦</th><th>级数</th><th>配的调式</th><th>为什么</th></tr></thead>
+    <tbody>
+      <tr><td>C</td><td>I</td><td>C Ionian</td><td>C 本身就是这个调式的家</td></tr>
+      <tr><td>Dm</td><td>ii</td><td>D Dorian</td><td>Lesson 10 刚练过，特征音自然 6 度（B）</td></tr>
+      <tr><td>Am</td><td>vi</td><td>A Aeolian</td><td>Lesson 4 的关系小调，也是"标准小调"的感觉</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout tip">
+    <span class="callout-label">一个更通用的规律（不止 C 大调）</span>
+    换个角度看，其实是<strong>和弦性质</strong>在决定默认调式，不一定要先知道是"第几级"：
+    <br>大三/大七和弦 → Ionian；小三/小七和弦 → Dorian（想更暗可以换 Aeolian）；属七和弦 → Mixolydian；半减七 → Locrian。
+    后两个（Mixolydian、Locrian）名字先眼熟一下，用到的时候查 <code>调式音阶/调式理论基础.md</code> 就行，不用现在死记。
+  </div>
+
+  <h2>动手：Drone / Vamp 练习法</h2>
+  <p>单纯背"和弦配调式"这张表没用，得让耳朵真的听出差别——用一个持续的和弦垫底，在上面即兴：</p>
+  <ol>
+    <li>反复弹 <strong>C 和弦</strong>（或录一段循环），在上面只用 Lesson 8 的 C 大调五声音阶（C D E G A）即兴，句子落回 C。</li>
+    <li>换成反复弹 <strong>Dm 和弦</strong>，在上面用 Lesson 10 的 D Dorian 音（D E F G A B C）即兴，刻意多停在 B 这个特征音上，句子落回 D。</li>
+    <li>换成反复弹 <strong>Am 和弦</strong>，在上面用 Lesson 9 的 A 小调五声/布鲁斯音阶即兴（A C D (D#) E G），句子落回 A。感受一下这个跟"标准 Aeolian"比，多了蓝音的额外情绪。</li>
+    <li>三组做完，回头对比：同样是"小调感"，Dm+Dorian 和 Am+布鲁斯音阶，情绪明显不一样——这就是选对调式的意义。</li>
+  </ol>
+
+  <div class="callout source">
+    <span class="callout-label">推荐阅读</span>
+    完整的 7 个和弦对应表、以及为什么这套方法对任何调都适用，见 <code>和弦/和弦音阶对应表.md</code>；
+    想在真实歌曲里找例子，<a href="https://www.hooktheory.com/" target="_blank" rel="noopener">Hooktheory</a> 的 TheoryTab 能查到具体歌曲用了哪个调式。
+  </div>
+
+  <h2>检验一下</h2>
+  <div class="quiz" id="quiz-11"></div>
+
+  <h2>下一课</h2>
+  <p>
+    <strong>Unit E 到这里全部完成</strong>。<a href="0012-capstone-original-8-bars.html">下一课</a> 是整个课程的收尾项目：用你学过的和弦进行 + 调式/音阶，
+    自己写一段 8 小节的原创片段——和弦、旋律都是你自己的选择，不再是照抄例子。
+  </p>
+
+  <div class="ask-teacher">
+    Drone 练习找不到顺手的循环方式（比如没有 loop 软件），告诉你的 AI 老师，可以想办法用手机录音或者其他土办法代替。
+  </div>
+
+</div>
+
+<script src="../assets/quiz.js"></script>
+<script>
+  initQuiz(document.getElementById('quiz-11'), [
+    { prompt: 'C 和弦（I 级）配哪个调式最直接？', choices: ['Ionian', 'Dorian', 'Aeolian', 'Mixolydian'], answer: 0 },
+    { prompt: 'Dm 和弦（ii 级）配哪个调式最直接？', choices: ['Ionian', 'Dorian', 'Aeolian', 'Mixolydian'], answer: 1 },
+    { prompt: 'Am 和弦（vi 级）配哪个调式最直接？', choices: ['Ionian', 'Dorian', 'Aeolian', 'Mixolydian'], answer: 2 },
+    { prompt: '通用规律：属七和弦默认配哪个调式？', choices: ['Mixolydian', 'Dorian', 'Ionian', 'Locrian'], answer: 0 },
+    { prompt: '通用规律：半减七（m7b5）默认配哪个调式？', choices: ['Locrian', 'Dorian', 'Lydian', 'Phrygian'], answer: 0 },
+    { prompt: '练调式感最有效的方法是？', choices: ['配一个持续的和弦/根音垫底，在上面即兴', '只看谱不弹', '越快弹完音阶越好', '必须用节拍器 110 以上'], answer: 0 },
+    { prompt: '【复习】Dorian 调式的特征音是？', choices: ['自然 6 度', '降 2 度', '升 4 度', '降 7 度'], answer: 0 },
+    { prompt: '【复习】布鲁斯音阶 = 小调五声音阶 + 哪个音？', choices: ['降五度（蓝音）', '大七度', '纯四度', '小二度'], answer: 0 },
+    { prompt: '【复习】C 大调的 IV 级和弦是？', choices: ['F', 'G', 'Am', 'Dm'], answer: 0 }
+  ]);
+</script>
+</body>
+</html>

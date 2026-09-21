@@ -1,0 +1,261 @@
+/* Shared stylesheet for the 吉他乐理与编曲基础 teaching workspace.
+   Tufte-ish: serif body, generous margins, quiet color, print-friendly.
+   Every lesson and reference page links this file — keep changes backward compatible. */
+
+:root {
+  --ink: #2b2723;
+  --ink-soft: #5c564d;
+  --paper: #faf6ee;
+  --paper-raised: #f1ead9;
+  --rule: #d8cdb4;
+  --accent: #8a5a3b;      /* warm sunburst-guitar brown */
+  --accent-2: #3b6e6a;    /* muted teal for secondary accents */
+  --good: #3f7d4a;
+  --bad: #a83c3c;
+  --code-bg: #efe6d2;
+  --max-width: 700px;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  margin: 0;
+  padding: 0 1.25rem 6rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti SC", "STSong", serif;
+  line-height: 1.65;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header.lesson-header {
+  padding: 2.5rem 0 1rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2rem;
+}
+
+header.lesson-header .kicker {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+header.lesson-header h1 {
+  margin: 0 0 0.4rem;
+  font-size: 1.9rem;
+  line-height: 1.25;
+}
+
+header.lesson-header .subtitle {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+nav.crumbs {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.5rem;
+}
+nav.crumbs a { color: var(--accent); }
+
+h2 {
+  font-size: 1.35rem;
+  margin-top: 2.4rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.6rem;
+}
+
+h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+
+p { margin: 1rem 0; }
+
+a { color: var(--accent-2); text-decoration-thickness: from-font; }
+a:hover { color: var(--accent); }
+
+strong { color: var(--ink); }
+
+blockquote {
+  margin: 1.2rem 0;
+  padding: 0.6rem 1rem;
+  background: var(--paper-raised);
+  border-left: 3px solid var(--rule);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid var(--rule);
+  padding: 0.4rem 0.6rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+th { background: var(--paper-raised); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 600; }
+td.root, th.root { color: var(--accent); font-weight: 700; }
+
+code, .mono {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  background: var(--code-bg);
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* ---- Callouts ---- */
+.callout {
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.4rem 0;
+  font-size: 0.95rem;
+}
+.callout.tip { background: #eef3ea; border: 1px solid #c7d9bd; }
+.callout.source { background: #eaf1f2; border: 1px solid #bcd6d8; }
+.callout.practice { background: #f7ecdf; border: 1px solid #e3c9a2; }
+.callout .callout-label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--ink-soft);
+}
+
+/* ---- Ask-your-teacher reminder ---- */
+.ask-teacher {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--rule);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ---- Quiz component (see quiz.js) ---- */
+.quiz {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1.2rem 1.2rem 1.4rem;
+  margin: 1.6rem 0;
+}
+.quiz-progress {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+.quiz-prompt {
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+}
+.quiz-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.quiz-choice {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  min-width: 4.5rem;
+  text-align: center;
+  padding: 0.55rem 0.9rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--ink);
+}
+.quiz-choice:hover { border-color: var(--accent-2); }
+.quiz-choice.correct { background: #e1f0e3; border-color: var(--good); }
+.quiz-choice.incorrect { background: #f5e1e1; border-color: var(--bad); }
+.quiz-choice[disabled] { cursor: default; opacity: 0.85; }
+.quiz-feedback {
+  margin-top: 0.8rem;
+  font-size: 0.92rem;
+  min-height: 1.4em;
+}
+.quiz-feedback.correct { color: var(--good); }
+.quiz-feedback.incorrect { color: var(--bad); }
+.quiz-summary {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  color: var(--ink-soft);
+}
+.quiz-next {
+  margin-top: 0.9rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.9rem;
+  background: var(--accent);
+  color: var(--paper);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+/* ---- Chord diagrams (see chord-diagram.js) ---- */
+.chord-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1.4rem 0;
+}
+.chord-diagram {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem 0.8rem;
+  width: 150px;
+  text-align: center;
+}
+
+/* ---- Fretboard diagram helper ---- */
+.fretboard-diagram {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  white-space: pre;
+  background: var(--code-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+@media print {
+  body { background: white; padding: 0; font-size: 12pt; }
+  .quiz, .ask-teacher, nav.crumbs { display: none; }
+  a { color: inherit; text-decoration: none; }
+  h2 { border-left-color: #999; }
+}

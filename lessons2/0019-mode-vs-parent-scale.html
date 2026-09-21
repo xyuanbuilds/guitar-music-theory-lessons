@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lessons 2 · 19 母音阶与调式中心</title><link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/course2.css"></head>
+<body class="course2"><main class="page">
+<header class="lesson-header"><div class="kicker">Grade 7 · Lesson 19 / 21</div><h1>母音阶相同，主音不同：调式真正改变的是什么</h1><p class="subtitle">C Ionian、D Dorian、A Aeolian 使用相同白键音；决定听感的是“谁像家”以及背景和弦支持谁。</p></header>
+<nav class="lesson-nav"><a href="0018-caged-scale-connection.html">← 上一课</a><a href="index.html">课程地图</a><a href="0020-characteristic-notes.html">下一课 →</a></nav>
+<p class="win"><strong>本课收获：</strong>用同一组音分别建立 C、D、A 三个中心，并解释为什么它们不是同一个调式。</p>
+<table><thead><tr><th>音集合</th><th>主音/背景</th><th>结果</th></tr></thead><tbody><tr><td>C D E F G A B</td><td>C / C 和弦</td><td>C Ionian</td></tr><tr><td>D E F G A B C</td><td>D / Dm 和弦</td><td>D Dorian</td></tr><tr><td>A B C D E F G</td><td>A / Am 和弦</td><td>A Aeolian</td></tr></tbody></table>
+<div class="callout tip"><span class="callout-label">判断顺序</span>先问“主音是谁”，再问“相对这个主音，各音级是什么”。只看用了哪些绝对音名，无法判断调式。</div>
+<div class="callout practice"><span class="callout-label">同音不同家</span><div id="practice"></div></div>
+<div class="gate"><span class="gate-label">过关标准</span><p>只用白键音/自然音，分别在 C、Dm、Am drone 上弹 30 秒；三段的句首句尾都落主音，回听时能辨认三个中心。</p></div>
+<div class="quiz" id="quiz"></div>
+<div class="callout source"><span class="callout-label">主要来源</span><a href="../reference/0009-modes-intro.html">调式入门参考卡</a>与本工作区 <a href="../调式音阶/调式理论基础.md">调式理论基础</a>。</div>
+<div class="complete-row" id="complete"></div><div class="ask-teacher">给 AI 老师一组音和一个持续和弦，让它反问你主音与音级，不要直接猜调式名称。</div>
+</main><script src="../assets/quiz.js"></script><script src="../assets/course2.js"></script><script>
+Course2.initQuiz(document.getElementById('quiz'),[
+ {prompt:'D Dorian 的主音是谁？',choices:['D','C','A','G'],answer:0},
+ {prompt:'相同音集合为何能有不同调式？',choices:['主音不同','速度不同','音色不同','把位不同'],answer:0},
+ {prompt:'A Aeolian 最稳的句尾音是？',choices:['A','C','E','G'],answer:0}
+]);
+Course2.initChecklist(document.getElementById('practice'),'l2-0019',['在 C drone 上以 C 开始和结束','在 Dm drone 上以 D 开始和结束','在 Am drone 上以 A 开始和结束','三段都加入同一个三音动机并比较']);
+Course2.initCompletion(document.getElementById('complete'),'l2-0019','0020-characteristic-notes.html');
+</script></body></html>

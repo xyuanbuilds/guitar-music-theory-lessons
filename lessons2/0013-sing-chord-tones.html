@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lessons 2 · 13 唱和弦音</title><link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/course2.css"></head>
+<body class="course2"><main class="page">
+<header class="lesson-header"><div class="kicker">Grade 5 · Lesson 13 / 21</div><h1>先唱 1–3–5，再让手去找</h1><p class="subtitle">真正的练耳不是猜答案；是脑中先预听一个音，再用声音和乐器核对。</p></header>
+<nav class="lesson-nav"><a href="0012-guided-eight-bars.html">← 上一课</a><a href="index.html">课程地图</a><a href="0014-interval-ear-trainer.html">下一课 →</a></nav>
+<p class="win"><strong>本课收获：</strong>听到根音后，不借助吉他唱出大三和弦与小三和弦的三音、五音。</p>
+<h2>正确顺序：预听 → 唱 → 验证</h2>
+<ol><li>吉他只弹一次根音，例如 C3。</li><li>心里想 E3 的声音，先不出声。</li><li>唱出 E3，再用吉他弹 E3 核对。</li><li>保留误差感觉；不要边弹边跟唱，那只是模仿。</li></ol>
+<div class="callout practice"><span class="callout-label">每天 5 分钟</span><div id="practice"></div></div>
+<div class="gate"><span class="gate-label">过关标准</span><p>C、G、A 三个根音随机出现；能唱出大三度、小三度、纯五度，9 次中至少 7 次第一次就接近正确音高。</p></div>
+<div class="quiz" id="quiz"></div>
+<div class="callout source"><span class="callout-label">主要来源</span>音程定义参见 <a href="https://www.musictheory.net/lessons/30">musictheory.net: Intervals</a>；日常流程见 <a href="../reference/0013-ear-training-protocol.html">每天 10 分钟练耳参考卡</a>。</div>
+<div class="complete-row" id="complete"></div><div class="ask-teacher">描述你最容易唱高或唱低的音程，AI 老师可以把下一轮练习限制在一对容易混淆的音程。</div>
+</main><script src="../assets/quiz.js"></script><script src="../assets/course2.js"></script><script>
+Course2.initQuiz(document.getElementById('quiz'),[
+ {prompt:'训练内在听觉的第一步是？',choices:['先在心里听','先用琴跟唱','先查看答案','先快速连弹'],answer:0},
+ {prompt:'大三和弦要预听哪组？',choices:['1–3–5','1–♭3–5','1–4–5','1–2–5'],answer:0},
+ {prompt:'唱完之后用吉他做什么？',choices:['核对音高','继续伴奏','立刻移调','加快速度'],answer:0}
+]);
+Course2.initChecklist(document.getElementById('practice'),'l2-0013',['C3：预听并唱 E3、Eb3、G3','G2：预听并唱 B2、Bb2、D3','A2：预听并唱 C#3、C3、E3','录下未经吉他提示的第一遍']);
+Course2.initCompletion(document.getElementById('complete'),'l2-0013','0014-interval-ear-trainer.html');
+</script></body></html>

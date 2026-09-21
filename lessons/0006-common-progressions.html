@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 6 · 常用和弦进行：I-V-vi-IV 弹唱练习</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="lesson-header">
+    <div class="kicker">Unit C · 音阶、调与和弦进行 · Lesson 6 / 13</div>
+    <h1>常用和弦进行：I-V-vi-IV 弹唱练习</h1>
+    <p class="subtitle">今天补齐 C、G、F 三个和弦——补完之后你就有了 C 大调 7 个顺阶和弦里的 6 个，够用来弹一条真正的流行和弦进行了。</p>
+  </header>
+
+  <nav class="crumbs">上一课：<a href="0005-diatonic-chords.html">顺阶和弦</a> ・ 参考卡：<a href="../reference/0005-common-progressions.html">常用和弦进行</a></nav>
+
+  <h2>补齐 C、G、F</h2>
+  <p>F 和弦传统按法要横按整根 1 品，对新手不友好——这里先用一个只需要 4 根弦的简化版，一样是完整的 F 大三和弦，等以后专门学横按时再升级成 6 弦版本。</p>
+
+  <div class="chord-row">
+    <div id="chord-C"></div>
+    <div id="chord-G"></div>
+    <div id="chord-F"></div>
+  </div>
+
+  <p style="font-size:0.9rem; color:var(--ink-soft);">
+    简化 F 的食指要同时压住 1、2 弦的 1 品（一个小横按，只压 2 根弦，比压 6 根弦轻松很多），中指按 3 弦 2 品，无名指按 4 弦 3 品，5、6 弦不弹。
+  </p>
+
+  <h2>拼出一条和弦进行：I-V-vi-IV</h2>
+  <p>
+    这是流行乐里最常见的 4 和弦走向，随便找几十首热门歌都能听到同一套骨架。级数写法的好处是<strong>换调只要重新代入顺阶和弦表</strong>，不用重新学一套新和弦逻辑：
+  </p>
+  <table>
+    <thead><tr><th>级数</th><th>I</th><th>V</th><th>vi</th><th>IV</th></tr></thead>
+    <tbody><tr><td>C 大调</td><td>C</td><td>G</td><td>Am</td><td>F</td></tr></tbody>
+  </table>
+
+  <div class="callout tip">
+    <span class="callout-label">换个起点，情绪就变了</span>
+    同样这 4 个和弦，从 vi 开始弹成 <strong>vi-IV-I-V</strong>（Am-F-C-G），和弦完全没变，但因为先落在小三和弦上，听感会明显更忧郁一点。
+    这就是"和弦进行"和"和弦本身"的区别——同一组积木，摆法不同，情绪不同。
+  </div>
+
+  <h2>上手练：两组 4 小节循环</h2>
+  <p>用 Lesson 2 练过的 ↓↓↑↑↓↑ 扫弦型，先练熟这一组，再换起点练第二组：</p>
+
+  <p class="mono" style="font-size:0.85rem; color:var(--ink-soft);">I - V - vi - IV</p>
+  <div class="fretboard-diagram">| C           | G           | Am          | F           |
+| ↓ ↓ ↑ ↑ ↓ ↑ | ↓ ↓ ↑ ↑ ↓ ↑ | ↓ ↓ ↑ ↑ ↓ ↑ | ↓ ↓ ↑ ↑ ↓ ↑ |</div>
+
+  <p class="mono" style="font-size:0.85rem; color:var(--ink-soft);">vi - IV - I - V（同样 4 个和弦，换个起点）</p>
+  <div class="fretboard-diagram">| Am          | F           | C           | G           |
+| ↓ ↓ ↑ ↑ ↓ ↑ | ↓ ↓ ↑ ↑ ↓ ↑ | ↓ ↓ ↑ ↑ ↓ ↑ | ↓ ↓ ↑ ↑ ↓ ↑ |</div>
+
+  <p>C → F 是这条进行里最陌生的一次切换（新和弦、新指法），可以先单独拎出来反复练"只不弹、只变形"，跟 Lesson 2 教的方法一样。</p>
+
+  <h2>检验一下</h2>
+  <div class="quiz" id="quiz-6"></div>
+
+  <h2>下一课</h2>
+  <p>
+    有了和弦进行，<a href="0007-function-and-cadences.html">下一课</a> 讲"和弦功能"和"终止式"——为什么几乎所有歌的最后一句，和弦都会走向某几种固定的公式，
+    这决定了你自己写和弦进行时，句子该怎么"收尾"。
+  </p>
+
+  <div class="ask-teacher">
+    C → F 切换总卡住、或者想拿别的调（比如 G 大调）重新代一遍这条进行，随时问你的 AI 老师。
+  </div>
+
+</div>
+
+<script src="../assets/chord-diagram.js"></script>
+<script src="../assets/quiz.js"></script>
+<script>
+  renderChordDiagram(document.getElementById('chord-C'), {
+    name: 'C', baseFret: 1, frets: ['x', 3, 2, 0, 1, 0], fingers: [null, 3, 2, null, 1, null]
+  });
+  renderChordDiagram(document.getElementById('chord-G'), {
+    name: 'G', baseFret: 1, frets: [3, 2, 0, 0, 0, 3], fingers: [3, 2, null, null, null, 4]
+  });
+  renderChordDiagram(document.getElementById('chord-F'), {
+    name: 'F（简化版）', baseFret: 1, frets: ['x', 'x', 3, 2, 1, 1], fingers: [null, null, 3, 2, 1, 1],
+    barre: { fret: 1, from: 4, to: 5 }
+  });
+
+  initQuiz(document.getElementById('quiz-6'), [
+    { prompt: '在 C 大调里，I-V-vi-IV 对应的和弦是？', choices: ['C-G-Am-F', 'C-F-Am-G', 'C-Am-F-G', 'C-G-F-Am'], answer: 0 },
+    { prompt: '同样 4 个和弦，换成 vi-IV-I-V，会是？', choices: ['Am-F-C-G', 'F-C-G-Am', 'G-Am-F-C', 'C-Am-G-F'], answer: 0 },
+    { prompt: 'G 大三和弦的三个音是？', choices: ['G-B-D', 'G-A-D', 'G-B-D#', 'G-Bb-D'], answer: 0 },
+    { prompt: 'F 大三和弦的三个音是？', choices: ['F-A-C', 'F-G#-C', 'F-A-C#', 'F-Ab-C'], answer: 0 },
+    { prompt: '顺阶和弦里，IV 级是大三还是小三？', choices: ['大三', '小三', '减三', '不确定'], answer: 0 },
+    { prompt: '为什么和弦进行习惯用罗马数字（级数）写，而不是直接写和弦名字？', choices: ['级数换到任何调都通用', '级数比较好看', '和弦名字不好记', '传统上都这么写'], answer: 0 },
+    { prompt: '【复习】C 大调的 ii 级和弦是？', choices: ['Dm', 'D', 'Em', 'Am'], answer: 0 },
+    { prompt: '【复习】大三和弦和小三和弦，区别在哪个音？', choices: ['根音', '三音', '五音', '根音和五音'], answer: 1 },
+    { prompt: '【复习】6 弦 8 品是哪个音？', choices: ['B2', 'C3', 'C#3', 'A#2'], answer: 1 }
+  ]);
+</script>
+</body>
+</html>

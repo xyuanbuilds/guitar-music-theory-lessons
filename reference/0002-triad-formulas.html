@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>参考卡：三和弦公式（半音计数法）</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page">
+  <header class="lesson-header">
+    <div class="kicker">参考卡 · Reference 0002</div>
+    <h1>三和弦公式（半音计数法）</h1>
+    <p class="subtitle">不需要先会大调音阶，只靠数半音就能拼出任何大三和弦、小三和弦。</p>
+  </header>
+
+  <h2>12 音循环表（从任意音数半音都靠它）</h2>
+  <p class="mono" style="font-size:1.05rem; text-align:center; padding:0.6rem; background:var(--code-bg); border-radius:6px;">
+    C – C# – D – D# – E – F – F# – G – G# – A – A# – B – (回到 C)
+  </p>
+  <p style="font-size:0.85rem; color:var(--ink-soft);">数到 B 之后继续数就绕回 C，是个环，不是一条直线。</p>
+
+  <h2>公式</h2>
+  <table>
+    <thead><tr><th>三和弦类型</th><th>根音</th><th>三音（从根音数）</th><th>五音（从根音数）</th></tr></thead>
+    <tbody>
+      <tr><td>大三和弦</td><td class="root">R</td><td>+4 半音（大三度）</td><td>+7 半音（纯五度）</td></tr>
+      <tr><td>小三和弦</td><td class="root">R</td><td>+3 半音（小三度）</td><td>+7 半音（纯五度）</td></tr>
+    </tbody>
+  </table>
+  <p><strong>核心结论</strong>：大小三和弦的五音位置完全一样（+7 半音），唯一的区别是三音差半音（+4 还是 +3）。</p>
+
+  <h2>已验证过的例子</h2>
+  <table>
+    <thead><tr><th>和弦</th><th>根音</th><th>三音</th><th>五音</th></tr></thead>
+    <tbody>
+      <tr><td>E 大三和弦</td><td>E</td><td>G#（E+4）</td><td>B（E+7）</td></tr>
+      <tr><td>A 小三和弦（Am）</td><td>A</td><td>C（A+3）</td><td>E（A+7）</td></tr>
+      <tr><td>D 大三和弦</td><td>D</td><td>F#（D+4）</td><td>A（D+7）</td></tr>
+    </tbody>
+  </table>
+
+  <p class="dim" style="font-family:'Helvetica Neue',Arial,sans-serif; font-size:0.8rem; color:var(--ink-soft);">
+    更完整的和弦理论（七和弦、顺阶和弦、和弦功能、终止式）见工作目录 <code>和弦/和弦构成与顺阶和弦.md</code>——那份文档假设你已经会大调音阶，等 Unit D 学完大调音阶后再回去读会更顺。
+    对应课程：<a href="../lessons/0003-how-chords-are-built.html">lessons/0003 和弦是怎么"叠"出来的</a>。
+  </p>
+</div>
+</body>
+</html>

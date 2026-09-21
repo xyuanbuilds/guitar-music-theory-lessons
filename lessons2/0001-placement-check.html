@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lessons 2 · 01 起点诊断</title><link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/course2.css"></head>
+<body class="course2"><main class="page">
+<header class="lesson-header"><div class="kicker">Grade 1 · Lesson 1 / 21</div><h1>起点诊断：把“看过”与“会用”分开</h1><p class="subtitle">这节不补新知识。它用 10 分钟确定：哪些旧课可以快速通过，哪些动作需要真正练到手上。</p></header>
+<nav class="lesson-nav"><a href="index.html">← 课程地图</a><a href="0002-octave-network.html">下一课 →</a></nav>
+<p class="win"><strong>本课收获：</strong>得到一张诚实的起点清单，并确定第一周练习重点。</p>
+
+<h2>第一关：闭卷检索</h2>
+<p>不要先打开旧课。凭记忆完成下面六题；答错只说明需要复习，并不说明你“没学会过”。</p>
+<div class="quiz" id="quiz"></div>
+
+<h2>第二关：拿琴验证</h2>
+<p>每项只给自己 60 秒。能做到就勾选；停顿、断拍或要查表，都先不勾。</p>
+<div class="callout practice"><span class="callout-label">手上诊断</span><div id="practice"></div></div>
+
+<h2>怎么根据结果走</h2>
+<div class="bridge"><strong>音名卡住：</strong>先回看 <a href="../lessons/0001-fretboard-roots-6th-5th-string.html">旧课 1</a> 与 <a href="../lessons/0013-semitones-strings-3-4.html">旧课 13</a>，再进入 Lesson 2。</div>
+<div class="bridge"><strong>和弦理论卡住：</strong>回看 <a href="../lessons/0003-how-chords-are-built.html">旧课 3</a> 与 <a href="../lessons/0005-diatonic-chords.html">旧课 5</a>；只复习错题对应部分。</div>
+<div class="bridge"><strong>理论全对、手上不稳：</strong>直接继续，但每课严格执行“过关标准”。你的瓶颈在动作自动化，不在理解。</div>
+
+<div class="gate"><span class="gate-label">过关标准</span><p>写下一句你的当前重点，例如：“理论可直接推进；先补 C–G–Am–F 不断拍”和“6/5 弦找音要提速”。</p></div>
+<div class="callout source"><span class="callout-label">主要来源</span>课程分级参考 <a href="https://www.justinguitar.com/store/practical-music-theory">JustinGuitar Practical Music Theory</a>；诊断内容来自本工作区现有 13 课的学习目标。</div>
+<div class="complete-row" id="complete"></div><div class="ask-teacher">把闭卷题分数和未勾选的动作告诉你的 AI 老师，它会据此调整练习量，而不是重新讲一遍你已经懂的理论。</div>
+</main><script src="../assets/quiz.js"></script><script src="../assets/course2.js"></script><script>
+Course2.initQuiz(document.getElementById('quiz'),[
+ {prompt:'6 弦 8 品是什么音？',choices:['B2','C3','D3','E3'],answer:1},
+ {prompt:'大三和弦的音程公式是？',choices:['1–3–5','1–♭3–5','1–4–5','1–♭5–5'],answer:0},
+ {prompt:'C 大调的 vi 级和弦是？',choices:['Am','Dm','Em','Gm'],answer:0},
+ {prompt:'V→I 的功能听感是？',choices:['强烈解决','保持悬停','继续展开','完全静止'],answer:0},
+ {prompt:'C 大调五声音阶删掉哪两级？',choices:['4与7','2与6','3与5','1与4'],answer:0},
+ {prompt:'A 小调五声音阶加 ♭5 得到什么？',choices:['布鲁斯音阶','和声音阶','全音音阶','半音音阶'],answer:0}
+]);
+Course2.initChecklist(document.getElementById('practice'),'l2-0001',['随机说出 6、5 弦 0–12 品的 8 个音名，最多错 1 个','连续弹 C–G–Am–F 四轮，节拍不停止','弹 C 大调五声音阶上行、下行并说出音级','在 C–G–Am–F 上用 5 个音即兴 30 秒']);
+Course2.initCompletion(document.getElementById('complete'),'l2-0001','0002-octave-network.html');
+</script></body></html>

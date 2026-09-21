@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>参考卡：大调音阶与关系小调</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page">
+  <header class="lesson-header">
+    <div class="kicker">参考卡 · Reference 0003</div>
+    <h1>大调音阶与关系小调</h1>
+    <p class="subtitle">大调公式 + 怎么从大调直接推出它的关系小调。</p>
+  </header>
+
+  <h2>大调音阶公式</h2>
+  <p class="mono" style="font-size:1.05rem; text-align:center; padding:0.6rem; background:var(--code-bg); border-radius:6px;">
+    全 – 全 – 半 – 全 – 全 – 全 – 半
+  </p>
+  <p>换算成半音数（从根音数起，Root = 0）：</p>
+  <table>
+    <thead><tr><th>级数</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8（回根音）</th></tr></thead>
+    <tbody><tr><td>+半音数</td><td>0</td><td>2</td><td>4</td><td>5</td><td>7</td><td>9</td><td>11</td><td>12</td></tr></tbody>
+  </table>
+
+  <h2>C 大调实例</h2>
+  <table>
+    <thead><tr><th>级数</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead>
+    <tbody><tr><td>音名</td><td class="root">C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>A</td><td>B</td></tr></tbody>
+  </table>
+  <p>自然半音（E→F、B→C）正好落在级数 3→4 和 7→8 之间——这也是为什么公式在这两处是"半"。</p>
+
+  <h2>关系小调（Relative Minor）</h2>
+  <p><strong>规则</strong>：大调音阶的第 6 级音，就是它关系小调的根音。音符完全一样，只是"家"换了。</p>
+  <table>
+    <thead><tr><th>大调</th><th>关系小调</th></tr></thead>
+    <tbody>
+      <tr><td>C</td><td>Am</td></tr>
+      <tr><td>G</td><td>Em</td></tr>
+      <tr><td>D</td><td>Bm</td></tr>
+      <tr><td>A</td><td>F#m</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout tip">
+    <span class="callout-label">和"同名小调"不是一回事</span>
+    关系小调（音符相同、根音不同）容易和"同名小调"（根音相同、音符不同，比如 C 大调 vs C 小调）搞混。
+    这个区分不影响现在学的内容，想深入看 <code>调式音阶/调式理论基础.md</code> 第二节。
+  </div>
+
+  <p class="dim" style="font-family:'Helvetica Neue',Arial,sans-serif; font-size:0.8rem; color:var(--ink-soft);">
+    对应课程：<a href="../lessons/0004-major-scale-relative-minor.html">lessons/0004 大调音阶与关系小调</a>。
+    七种调式、特征音等更深入内容见 <code>调式音阶/调式理论基础.md</code>（Unit E 会用到）。
+  </p>
+</div>
+</body>
+</html>

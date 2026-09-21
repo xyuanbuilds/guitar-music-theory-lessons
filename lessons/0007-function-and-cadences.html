@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 7 · 和弦功能与终止式</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="lesson-header">
+    <div class="kicker">Unit C · 音阶、调与和弦进行 · Lesson 7 / 13</div>
+    <h1>和弦功能与终止式：为什么歌曲这样结尾</h1>
+    <p class="subtitle">这一课不加新和弦、不加新手型——纯粹用你已经会弹的 C、Dm、Em、F、G、Am，搞懂"一句和弦为什么听起来像结束了"，还是"像没说完"。</p>
+  </header>
+
+  <nav class="crumbs">上一课：<a href="0006-common-progressions.html">常用和弦进行</a> ・ 参考卡：<a href="../reference/0006-function-and-cadences.html">和弦功能与终止式</a></nav>
+
+  <h2>7 个和弦，三种角色</h2>
+  <p>顺阶和弦不是 7 个互相独立的选项，它们按"角色"分成三组：</p>
+  <table>
+    <thead><tr><th>功能</th><th>C 大调里对应</th><th>感觉</th></tr></thead>
+    <tbody>
+      <tr><td>主功能（Tonic，"家"）</td><td>I（C）、vi（Am）</td><td>稳定，可以停留</td></tr>
+      <tr><td>下属功能（Subdominant，"出门"）</td><td>IV（F）、ii（Dm）</td><td>离开主音，但不紧张</td></tr>
+      <tr><td>属功能（Dominant，"路上"）</td><td>V（G）、vii°（Bdim）</td><td>紧张，很想解决回 I</td></tr>
+    </tbody>
+  </table>
+  <p>
+    一句和弦进行的基本叙事，就是<strong>主 → 下属 → 属 → 主</strong>：从家出发，路上制造一点紧张，最后回家。
+    不是所有歌都严格按这个顺序走，但几乎每个和弦选择，背后都在往这三个角色里落。
+  </p>
+
+  <h2>四种"收尾"公式：终止式</h2>
+  <p>一句和弦进行怎么结束，几乎都逃不出这 4 种公式：</p>
+  <table>
+    <thead><tr><th>终止式</th><th>走向</th><th>C 大调实例</th><th>效果</th></tr></thead>
+    <tbody>
+      <tr><td>完全终止</td><td>V → I</td><td>G → C</td><td>最强的"回家"感，最常见的结尾</td></tr>
+      <tr><td>半终止</td><td>任意 → V</td><td>… → G</td><td>停在悬念上，像没说完的话</td></tr>
+      <tr><td>变格终止</td><td>IV → I</td><td>F → C</td><td>比完全终止柔和（"阿门终止"）</td></tr>
+      <tr><td>阻碍终止</td><td>V → vi</td><td>G → Am</td><td>本该回家却被"骗"到别处</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout practice">
+    <span class="callout-label">动手听：弹一遍，对比感觉</span>
+    每组只弹两个和弦，一个和弦一小节，弹完停住感受一下"结束了吗"：
+    <ol style="margin-top:0.6rem;">
+      <li><strong>G → C</strong>（完全终止）——应该感觉"到家了，可以停"。</li>
+      <li><strong>C → G</strong>，弹完停在 G 上（半终止）——应该感觉"还没完，在等下一句"。</li>
+      <li><strong>F → C</strong>（变格终止）——也是回家，但比第 1 组更"软"，没那么斩钉截铁。</li>
+      <li><strong>C → F → G → Am</strong>，注意最后落在 Am 而不是 C（阻碍终止）——应该感觉"咦，怎么没回 C"，有点意外。</li>
+    </ol>
+  </div>
+
+  <div class="callout source">
+    <span class="callout-label">推荐阅读</span>
+    <a href="https://www.hooktheory.com/" target="_blank" rel="noopener">Hooktheory</a> 的 TheoryTab 数据库能查到真实歌曲在哪用了阻碍终止、哪首歌是完全终止收尾，把这几种终止式套进真实歌曲里再感受一遍，比单看和弦表更有感觉。
+  </div>
+
+  <h2>检验一下</h2>
+  <div class="quiz" id="quiz-7"></div>
+
+  <h2>下一课</h2>
+  <p>
+    和弦这条线到这里先告一段落。<a href="0008-major-pentatonic.html">下一课</a> 换轨到音阶：五声音阶——用最少的音，最快能开始写旋律、即兴的音阶，
+    直接决定你能不能在自己写的和弦进行上哼出一条像样的旋律。
+  </p>
+
+  <div class="ask-teacher">
+    弹完 4 组终止式听不出区别也完全正常，耳朵需要时间——可以让你的 AI 老师再多举几组例子对比着弹。
+  </div>
+
+</div>
+
+<script src="../assets/quiz.js"></script>
+<script>
+  initQuiz(document.getElementById('quiz-7'), [
+    { prompt: 'G → C 属于哪种终止式？', choices: ['完全终止', '半终止', '变格终止', '阻碍终止'], answer: 0 },
+    { prompt: 'F → C 属于哪种终止式？', choices: ['完全终止', '半终止', '变格终止', '阻碍终止'], answer: 2 },
+    { prompt: 'G → Am 属于哪种终止式？', choices: ['完全终止', '半终止', '变格终止', '阻碍终止'], answer: 3 },
+    { prompt: '一句和弦进行如果停在 V 级上结束，是哪种终止式？', choices: ['完全终止', '半终止', '变格终止', '阻碍终止'], answer: 1 },
+    { prompt: 'C 大调里，vi 级（Am）属于哪个功能组？', choices: ['主功能', '下属功能', '属功能', '不属于任何组'], answer: 0 },
+    { prompt: 'C 大调里，V 级（G）属于哪个功能组？', choices: ['主功能', '下属功能', '属功能', '不属于任何组'], answer: 2 },
+    { prompt: '【复习】在 C 大调里，I-V-vi-IV 对应的和弦是？', choices: ['C-G-Am-F', 'C-F-Am-G', 'C-Am-F-G', 'C-G-F-Am'], answer: 0 },
+    { prompt: '【复习】C 大调的 ii 级和弦是？', choices: ['Dm', 'D', 'Em', 'Am'], answer: 0 },
+    { prompt: '【复习】大三和弦和小三和弦，区别在哪个音？', choices: ['根音', '三音', '五音', '根音和五音'], answer: 1 }
+  ]);
+</script>
+</body>
+</html>

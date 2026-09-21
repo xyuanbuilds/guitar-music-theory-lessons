@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lessons 2 · 05 三个调的和弦家族</title><link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/course2.css"></head>
+<body class="course2"><main class="page">
+<header class="lesson-header"><div class="kicker">Grade 2 · Lesson 5 / 21</div><h1>C、G、D：三个调的和弦家族</h1><p class="subtitle">顺阶和弦公式永远相同，改变的是每一级的实际和弦名。</p></header>
+<nav class="lesson-nav"><a href="0004-spell-triads.html">← 上一课</a><a href="index.html">课程地图</a><a href="0006-transpose-a-progression.html">下一课 →</a></nav>
+<p class="win"><strong>本课收获：</strong>从级数公式推出 C、G、D 三个调，不再把整张表当作三个独立答案背诵。</p>
+<h2>固定不变的骨架</h2>
+<p class="mono">I 大 · ii 小 · iii 小 · IV 大 · V 大 · vi 小 · vii° 减</p>
+<table><thead><tr><th>调</th><th>I</th><th>ii</th><th>iii</th><th>IV</th><th>V</th><th>vi</th><th>vii°</th></tr></thead><tbody><tr><td>C</td><td>C</td><td>Dm</td><td>Em</td><td>F</td><td>G</td><td>Am</td><td>B°</td></tr><tr><td>G</td><td>G</td><td>Am</td><td>Bm</td><td>C</td><td>D</td><td>Em</td><td>F#°</td></tr><tr><td>D</td><td>D</td><td>Em</td><td>F#m</td><td>G</td><td>A</td><td>Bm</td><td>C#°</td></tr></tbody></table>
+<div class="callout tip"><span class="callout-label">手上策略</span>D 调的 Bm 暂用迷你指型 <code>x-x-4-4-3-2</code>；F#m 暂时只需要认得，不要求本课流畅横按。课程保持“理论快、手上慢”。</div>
+<div class="callout practice"><span class="callout-label">生成，不抄写</span><div id="practice"></div></div>
+<div class="gate"><span class="gate-label">过关标准</span><p>给出 C、G、D 任一调与 I/IV/V/vi 任一级，你能在 3 秒内说出和弦名，12 次中至少 10 次正确。</p></div>
+<div class="quiz" id="quiz"></div>
+<div class="callout source"><span class="callout-label">主要来源</span><a href="https://www.musictheory.net/lessons/43">musictheory.net: Diatonic Triads</a> 与 <a href="../reference/0004-diatonic-chords-major-key.html">大调顺阶和弦参考卡</a>。</div>
+<div class="complete-row" id="complete"></div><div class="ask-teacher">让 AI 老师用“G 调 vi 是什么？”这种格式快问快答，直到你的正确率稳定超过 80%。</div>
+</main><script src="../assets/quiz.js"></script><script src="../assets/course2.js"></script><script>
+Course2.initQuiz(document.getElementById('quiz'),[
+ {prompt:'G 大调的 vi 级是什么？',choices:['Em','Am','Bm','Dm'],answer:0},
+ {prompt:'D 大调的 IV 级是什么？',choices:['G','A','Bm','Em'],answer:0},
+ {prompt:'C、G、D 三调共同的 ii 是？',choices:['小三和弦','大三和弦','减三和弦','增三和弦'],answer:0}
+]);
+Course2.initChecklist(document.getElementById('practice'),'l2-0005',['遮住表格，从大调音阶写出 G 调七个和弦','遮住表格，从大调音阶写出 D 调七个和弦','只弹三个调的 I–IV–V–I 并说级数','比较三个调的 V→I 解决感']);
+Course2.initCompletion(document.getElementById('complete'),'l2-0005','0006-transpose-a-progression.html');
+</script></body></html>

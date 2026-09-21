@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lessons 2 · 17 三和弦转位链</title><link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/course2.css"></head>
+<body class="course2"><main class="page">
+<header class="lesson-header"><div class="kicker">Grade 6 · Lesson 17 / 21</div><h1>三和弦转位链：把 CAGED 压缩成真正可用的小和弦</h1><p class="subtitle">同三个音换一个最低音，就得到根位、第一转位、第二转位。它们是 CAGED 形状里最清楚的骨架。</p></header>
+<nav class="lesson-nav"><a href="0016-caged-landmarks.html">← 上一课</a><a href="index.html">课程地图</a><a href="0018-caged-scale-connection.html">下一课 →</a></nav>
+<p class="win"><strong>本课收获：</strong>在 3、2、1 弦弹出 C 大三和弦三个转位，并逐音说出 C、E、G。</p>
+<table><thead><tr><th>转位</th><th>3–2–1 弦</th><th>低→高音名</th></tr></thead><tbody><tr><td>根位</td><td>5–5–3</td><td>C4–E4–G4</td></tr><tr><td>第一转位</td><td>9–8–8</td><td>E4–G4–C5</td></tr><tr><td>第二转位</td><td>12–13–12</td><td>G4–C5–E5</td></tr></tbody></table>
+<p>转位名称只看最低音：根音最低是根位，三音最低是第一转位，五音最低是第二转位。</p>
+<div class="callout practice"><span class="callout-label">从 C 扩展到 G 与 D</span><div id="practice"></div></div>
+<div class="gate"><span class="gate-label">过关标准</span><p>随机指定 C 的一个转位：5 秒内按出并说出低到高三个音；三种转位连续两轮无误。</p></div>
+<div class="quiz" id="quiz"></div>
+<div class="callout source"><span class="callout-label">主要来源</span><a href="https://www.musictheory.net/lessons/41">musictheory.net: Triad Inversion</a> 与 <a href="../reference/0012-caged-and-triad-map.html">CAGED 与三和弦地图</a>。</div>
+<div class="complete-row" id="complete"></div><div class="ask-teacher">如果品格对但音名说不出，把你按的三格发给 AI 老师；它会让你从最低音推回转位，而非直接给答案。</div>
+</main><script src="../assets/quiz.js"></script><script src="../assets/course2.js"></script><script>
+Course2.initQuiz(document.getElementById('quiz'),[
+ {prompt:'最低音是三音时叫什么？',choices:['第一转位','第二转位','根音位置','开放位置'],answer:0},
+ {prompt:'C/E 的最低音是哪一个？',choices:['E','C','G','B'],answer:0},
+ {prompt:'C 的第二转位低到高是？',choices:['G C E','C E G','E G C','C G E'],answer:0}
+]);
+Course2.initChecklist(document.getElementById('practice'),'l2-0017',['逐个按响 C 的三个转位','每个转位从低到高说音名','保持同一转位形状整体移动到 D','找回 G 和弦一个最近转位']);
+Course2.initCompletion(document.getElementById('complete'),'l2-0017','0018-caged-scale-connection.html');
+</script></body></html>
