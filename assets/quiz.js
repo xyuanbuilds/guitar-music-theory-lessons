@@ -17,7 +17,27 @@
  *   - feedback is immediate, per-question (tight feedback loop).
  *   - one question shown at a time; "next" only appears after answering.
  */
-function initQuiz(container, questions) {
+function initQuiz(container, questions, options) {
+  options = options || {};
+  if (options.shuffleChoices) {
+    questions = questions.map(function (question) {
+      var entries = question.choices.map(function (choice, index) {
+        return { choice: choice, correct: index === question.answer };
+      });
+      for (var i = entries.length - 1; i > 0; i -= 1) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = entries[i];
+        entries[i] = entries[j];
+        entries[j] = temp;
+      }
+      return {
+        prompt: question.prompt,
+        choices: entries.map(function (entry) { return entry.choice; }),
+        answer: entries.findIndex(function (entry) { return entry.correct; }),
+        explain: question.explain
+      };
+    });
+  }
   var current = 0;
   var correctCount = 0;
   var answered = false;
@@ -53,6 +73,7 @@ function initQuiz(container, questions) {
 
     var feedback = document.createElement('div');
     feedback.className = 'quiz-feedback';
+    feedback.setAttribute('role', 'status');
     feedback.id = 'quiz-feedback-slot';
     container.appendChild(feedback);
 
@@ -99,7 +120,9 @@ function initQuiz(container, questions) {
     var summary = document.createElement('div');
     summary.className = 'quiz-summary';
     summary.textContent = '本组答对 ' + correctCount + ' / ' + questions.length + '。';
-    if (correctCount === questions.length) {
+    if (options.summary) {
+      summary.textContent += ' ' + options.summary;
+    } else if (correctCount === questions.length) {
       summary.textContent += ' 全对，可以进入下一课了。';
     } else {
       summary.textContent += ' 建议刷新页面再练一轮，直到能稳定全对。';

@@ -1,0 +1,60 @@
+@import url("fretboard-visual.css");
+
+/* Jazz Solo Lab shares the existing course layout and quiz styles. */
+body.jazz { --grade: #54527c; --grade-soft: #eeedf5; --accent: #54527c; --accent-2: #3c6471; }
+.jazz .course-hero { padding-top: 3.6rem; }
+.jazz .course-hero h1 { font-size: clamp(2.2rem, 7vw, 3.5rem); line-height: 1.18; }
+.jazz .lead { max-width: 35rem; }
+.jazz .course-stats { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.jazz .course-stat + .course-stat { border-top: 0; border-left: 1px solid var(--rule); }
+.jazz .lesson-link { min-height: 10rem; }
+.jazz .lesson-link.reviewed { box-shadow: inset 0 3px var(--grade); }
+.jazz .lesson-link.reviewed .number::after { content: ' ↺'; }
+.jazz .micro { font-size: .8rem; color: var(--ink-soft); }
+.jazz .scroll { overflow-x: auto; max-width: 100%; margin: 1rem 0; }
+.jazz .scroll table { margin: 0; }
+.jazz .fretboard { min-width: 640px; font: .77rem 'SF Mono', Menlo, monospace; }
+.jazz .fretboard td { height: 2.7rem; min-width: 3.2rem; color: #746e65; }
+.jazz .fretboard .tone { background: var(--grade-soft); color: var(--ink); }
+.jazz .fretboard .target { background: #d6e6e2; color: #173f37; font-weight: 700; }
+.jazz .fretboard .target::after { content: '•'; }
+.jazz .phrase { min-width: 620px; font: .8rem 'SF Mono', Menlo, monospace; }
+.jazz .phrase th, .jazz .phrase td { white-space: nowrap; }
+.jazz .phrase th:nth-child(2n) { color: var(--grade); }
+.jazz .phrase td:first-child { font-family: inherit; }
+.jazz .lab { padding: 1rem; border: 1px solid var(--grade); border-radius: 6px; background: #f2f0f7; margin: 1.5rem 0; }
+.jazz .lab h3 { margin-top: 0; }
+.jazz .lab-controls { display: flex; flex-wrap: wrap; gap: .65rem; align-items: end; }
+.jazz .lab label { display: flex; flex-direction: column; gap: .25rem; font-size: .8rem; }
+.jazz button, .jazz select, .jazz input { font: inherit; }
+.jazz button, .jazz select { min-height: 44px; }
+.jazz button { cursor: pointer; }
+.jazz :focus-visible { outline: 3px solid #8065b2; outline-offset: 3px; }
+.jazz .lab input[type=number] { width: 5rem; }
+.jazz .lab input[type=range] { width: 7rem; }
+.jazz .lab-status { font: 600 1rem 'Helvetica Neue', Arial, sans-serif; min-height: 2rem; padding-top: .75rem; }
+.jazz .changes { display: flex; flex-wrap: wrap; gap: .35rem; margin: .7rem 0; }
+.jazz .changes span { padding: .3rem .5rem; border: 1px solid var(--rule); border-radius: 3px; font: .8rem Menlo, monospace; }
+.jazz .changes .active { background: var(--grade); color: white; }
+.jazz .practice-item { grid-template-columns: 1.25rem 1fr; cursor: pointer; }
+.jazz .practice-item input { width: 18px; height: 18px; }
+.jazz details { border-block: 1px solid var(--rule); padding: .8rem 0; margin: 1rem 0; }
+.jazz summary { cursor: pointer; color: var(--grade); }
+.jazz .review-controls { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.jazz .review-controls button[aria-pressed=true] { background: var(--grade); color: white; }
+.jazz .source-list { font-size: .88rem; }
+@media (max-width: 480px) {
+  body.jazz { padding-inline: 1rem; }
+  .jazz .course-stat { padding-inline: .2rem; }
+  .jazz .course-stat strong { font-size: 1.05rem; }
+  .jazz .course-stat span { font-size: .68rem; }
+  .jazz .lesson-link { min-height: auto; }
+}
+@media print {
+  .jazz .lab, .jazz .review-controls, .jazz .quiz, .jazz .lesson-nav { display: none; }
+  .jazz .scroll { overflow: visible; }
+  .jazz .fretboard, .jazz .phrase { min-width: 0; width: 100%; font-size: 8pt; }
+  .jazz .fretboard td { min-width: 0; height: auto; }
+  .jazz details { break-inside: avoid; }
+  .jazz .gate, .jazz table { break-inside: avoid; }
+}

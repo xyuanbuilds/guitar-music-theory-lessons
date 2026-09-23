@@ -1,0 +1,62 @@
+/* Shared visual fingering cards for Lessons 2 and Lessons 3. */
+.fingering-section {
+  margin: 1.4rem 0 2rem;
+  padding: 1rem 0 1.2rem;
+  border-block: 1px solid var(--rule);
+}
+.fingering-section h3 { margin: 0 0 .25rem; }
+.finger-intro, .finger-legend, .finger-route, .finger-note {
+  color: var(--ink-soft);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.finger-intro { margin: 0 0 1rem; font-size: .86rem; }
+.finger-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: .75rem;
+}
+.finger-card {
+  margin: 0;
+  min-width: 0;
+  padding: .8rem .7rem .75rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: rgba(255,255,255,.28);
+}
+.finger-card figcaption {
+  min-height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font: 700 .9rem "Helvetica Neue", Arial, sans-serif;
+}
+.finger-card svg { display: block; width: 100%; max-width: 230px; margin: 0 auto; overflow: visible; }
+.finger-string, .finger-fret { stroke: var(--ink); stroke-width: 1.1; }
+.finger-nut { stroke: var(--ink); stroke-width: 4; }
+.finger-string-label, .finger-fret-label { fill: var(--ink-soft); font: 10px "Helvetica Neue", Arial, sans-serif; }
+.finger-open { fill: var(--ink-soft); font: 18px "Helvetica Neue", Arial, sans-serif; }
+.finger-dot { fill: var(--grade, var(--accent)); stroke: var(--paper); stroke-width: 1.5; }
+.finger-dot.root { fill: #356d63; }
+.finger-dot.target { fill: #8a5a3b; }
+.finger-dot.color { fill: var(--paper); stroke: #8a5a3b; stroke-width: 3; }
+.finger-number { fill: var(--paper); font: 700 11px "Helvetica Neue", Arial, sans-serif; }
+.finger-dot.color + .finger-number { fill: #6d402a; }
+.finger-barre { stroke: var(--grade, var(--accent)); stroke-width: 16; stroke-linecap: round; opacity: .78; }
+.finger-route { margin: .45rem 0 0; font-size: .72rem; line-height: 1.45; overflow-wrap: anywhere; }
+.finger-note { margin: .35rem 0 0; font-size: .75rem; line-height: 1.45; }
+.finger-legend { margin: .85rem 0 0; font-size: .75rem; line-height: 1.7; }
+.finger-legend span { display:inline-block; width:.78rem; height:.78rem; border-radius:50%; margin-right:.2rem; vertical-align:-.08rem; }
+.root-swatch { background:#356d63; }
+.target-swatch { background:#8a5a3b; }
+.color-swatch { background:var(--paper); border:2px solid #8a5a3b; }
+@media (max-width: 480px) {
+  .finger-card-grid { grid-template-columns: 1fr; }
+  .finger-card { padding-inline: .5rem; }
+}
+@media print {
+  .finger-card-grid { grid-template-columns: repeat(3, 1fr); gap: .35rem; }
+  .finger-card { break-inside: avoid; padding: .35rem; }
+  .finger-card figcaption { min-height: 0; }
+  .finger-intro, .finger-legend, .finger-route, .finger-note { font-size: 8pt; }
+}

@@ -6,6 +6,7 @@
 - 喜欢结构化、可复查的参考资料，倾向把讨论沉淀成文档而不是一次性讲完就丢。
 - 学理论接受度和抽象思维能力强（调式、顺阶和弦这些概念一讲就懂），但手上功夫是新手（换和弦、横按还不熟）——课程要"理论快、手上慢"两条线分开对待，不要因为理论学得快就默认手也跟得上。
 - 时间充裕，想尽快系统学完，可以一次性给稍多内容/多个课程，不用刻意拖慢。
+- 只要课程给出具体按法、把位或指型，就要同时提供类似和弦图的可视化指板图：琴头在上、6→1 弦从左到右、品格向下，并在圆点内标左手指号；文字表格用于核对音名，不能替代按法图。
 
 ## 课程路线图（草案，随学习记录调整）
 
@@ -17,7 +18,7 @@
 
 **Unit B · 基础和弦与手上功夫**（技巧动作以 JustinGuitar Grade 1 为主要参考）
 - 你的第一批开放和弦：E、Am、D + 换和弦节奏训练 ✅ `lessons/0002`（用了新做的 `assets/chord-diagram.js` 和弦图组件，见下方组件清单）
-- 和弦是怎么"叠"出来的：三度叠置入门 ✅ `lessons/0003`（用半音计数法讲三和弦，没有直接照搬 `和弦/和弦构成与顺阶和弦.md` 的"大调音阶叠三度"讲法，因为大调音阶要到 Unit D 才教——那份文档等 Unit D 之后再回头看更顺）
+- 和弦是怎么"叠"出来的：三度叠置入门 ✅ `lessons/0003`（用半音计数法讲三和弦，没有直接照搬 `和弦chords/和弦构成与顺阶和弦.md` 的"大调音阶叠三度"讲法，因为大调音阶要到 Unit D 才教——那份文档等 Unit D 之后再回头看更顺）
 
 **Unit C · 音阶、调与和弦进行（写歌核心）**
 > 原计划"大调音阶"排在 Unit D，但"顺阶和弦"必须先懂大调音阶才讲得通，所以把它提前挪到了这个 Unit 开头。
@@ -32,7 +33,7 @@
 
 **Unit E · 调式与色彩**
 - 七种调式与特征音 ✅ `lessons/0010`（点破 Ionian/Aeolian 就是 Lesson4 已经会的东西；新解锁 Dorian，用 D Dorian 全部复用已教过的品位（2/3/4弦），没有新指法；完整表指向 `调式音阶/调式理论基础.md`）
-- 和弦配调式：给伴奏挑对的音阶 ✅ `lessons/0011`（只深入讲了 C/Dm/Am 三组已解锁的配对+drone练习法，Mixolydian/Locrian 等留了通用规律预告，没有强行讲全 7 组——完整表指向 `和弦/和弦音阶对应表.md`）——**Unit E 完成**
+- 和弦配调式：给伴奏挑对的音阶 ✅ `lessons/0011`（只深入讲了 C/Dm/Am 三组已解锁的配对+drone练习法，Mixolydian/Locrian 等留了通用规律预告，没有强行讲全 7 组——完整表指向 `和弦chords/和弦音阶对应表.md`）——**Unit E 完成**
 
 **Unit F · 综合应用**
 - 写一段 8 小节原创和弦进行 + 旋律（综合项目） ✅ `lessons/0012`（问句+答句结构，半终止+变格终止；给了完整示例 + "轮到你"创作任务，没有小测验——等用户交作品回来再评估、写学习记录）——**第一轮 12 课路线图全部完成**
@@ -53,11 +54,12 @@
 - `style.css` —— 全课程共用样式（Tufte 风格排版、callout 提示框、quiz 样式、chord-diagram 样式）
 - `quiz.js` —— `initQuiz(container, questions)`，选择题小测验组件，即时反馈+答对/答错解释
 - `chord-diagram.js` —— `renderChordDiagram(container, {name, baseFret, frets, fingers, barre})`，SVG 和弦图组件，横按（barre）已经预留了参数，后面讲横按和弦时直接用，不用重做
+- `fretboard-visual.css` / `fretboard-visual.js` —— Lessons 2/3 共用的可视化按法卡；支持任意起始品格、手指号、根音/目标音/色彩音和小横按。新增具体把位时，应先为它补一个 preset，再保留音名表作科学音高核对。
 
 ## 待办 / 想法
 
 - GLOSSARY.md 还没建：等 Unit A/B 跑完、有真正学会的术语了再建，避免堆砌没消化的词条。
-- Unit D/F 阶段需要再搜一轮"五声音阶写旋律"相关的高质量免费资源，目前 RESOURCES.md 里是空的（见 Gaps）。
+- Lessons 4 已补写旋律动机、段落对比与作品修订资料；五声音阶专项写旋律仍可在用户进入相关练习时继续补充。
 
 ## Lessons 2 · Practical Theory Route（2026-09-21）
 
@@ -71,4 +73,35 @@
 
 新组件：`assets/course2.css`、`assets/course2.js`。新参考卡：`reference/0012-caged-and-triad-map.html`、`reference/0013-ear-training-protocol.html`。
 
-学习证据仍为空：创建课程不等于用户已经学会。应在用户完成 Lesson 1 诊断或提交阶段作品后，才写 `learning-records/0001-*.md`。
+演奏学习证据仍为空：创建课程不等于用户已经学会。用户完成诊断或提交阶段作品后，再按现有最高编号新增学习记录；目标变化记录不算掌握证据。
+
+## Lessons 3 · Jazz Solo Lab（2026-09-22）
+
+用户明确要求独立新增爵士音阶与 solo 路线，已据此更新 MISSION；`learning-records/0001-jazz-solo-goal.md` 只记录目标变化，不记录掌握程度。后续扫描现有编号再递增。
+
+- 15 节核心：两音短句 → 七和弦 → 导向线 → swing/留白 → Dorian → Mixolydian/Ionian → 8 小节 solo → 半音趋近 → 属 bebop → 小调 ii–V–i → 和声小调 → 爵士旋律小调 → Jazz Blues → 听、唱、变奏 → 16 小节作品。
+- 3 节选修：Lydian Dominant、altered、减音阶。门槛是核心作品稳拍且落点清楚，不以学完更多音阶为目标。
+- 每课含具体音高、0–8 品指板图、原创节奏表（项目课不给范奏）、可调速伴奏、两题概念检索、实际演奏标准和隔日检索。开始先预备一小节，切走页面停止；伴奏并非录音评分器。
+- 新组件：`assets/jazz.css` / `assets/jazz.js`；复用 `style.css`、`course2.css` 和 `quiz.js`。quiz 增加可选 summary 文案，不改变旧课默认行为。
+- 自评进度单独保存在 `guitar-theory-lessons3-progress-v1`，区分“练过”和“隔日复弹通过”；不是服务器记录、老师确认或学习证据。
+- 新参考：`reference/0014-jazz-scale-palette.html` 与 `0015-jazz-practice-protocol.html`。大调 bebop 对齐 C6 的区别放在参考卡补充，核心先练属 bebop。
+
+下一步教学从第 1 课诊断或用户发来的作品开始；根据实际手上表现减音、降速或跳转回补，不默认 lessons/lessons2 已完成。暂不将新术语写入 GLOSSARY，因为没有用户掌握证据。
+
+## Lessons 4 · 写歌工作坊（2026-09-22）
+
+- 12 节课只发展一首作品：起点诊断与两种节奏 → 8 小节主歌 → 8 小节副歌 → 低音/织体 → 36 小节曲式 → 完整录音、一次修订与隔日复弹。
+- 使用 C–G–Am–F 与新手友好的 `xx321x` F；需要按法时复用原始暖色 `chord-diagram.js`，不用信息密集的多色指板卡。
+- 新组件：`assets/rhythm-grid.css/js` 提供可编辑、可试听的 4/4 节奏网格；`assets/workshop.css/js` 跨课保存同一份作品草稿、导出/打印和区分当天练习与隔日复弹。
+- 空扫、主动止音、打击扫弦、palm mute 明确区分；Swing 的 2:1 只作为播放器近似。播放器不录音、不判断演奏。
+- 新参考：`reference/0016-rhythm-actions.html`、`0017-song-draft-protocol.html`。创建课程不构成掌握证据；等待第 1 课诊断或实际录音后再写学习记录。
+
+## ACG Riff 补充线（2026-09-22）
+
+- `songbook/` 是歌曲结构与谱源阅读线；`technique/` 是每日 15 分钟电吉他动作训练。前者是 Lessons 4 曲式知识的具体案例，后者只处理执行层，不重讲节奏理论。
+- 术语固定为英文 + 中文，不使用日语段落术语；《青春コンプレックス》作为专有歌名保留原文。
+- 进度使用“稳定 BPM”，不追单次最高值。唯一算法见 `reference/0018-clean-tempo-protocol.html`：连续 3 遍干净 +4 BPM，连续 2 遍不干净 −8 BPM，原速连续 5 遍才过关。
+- 用户必须先在 `songbook/0003-seishun-complex-anatomy.html` 确认目标段落与 Aniplex 完整发行录音时间戳。确认前不生成 riff 专项练习；授权谱未核实的曲调、BPM、把位、节奏与声部分工标“待核实”。
+- 新组件 `assets/technique.css/js` 使用独立 localStorage key `guitar-theory-technique-progress-v1`，仅保存目标、诊断与稳定 BPM 记录；不自动写学习记录。
+- 2026-09-23 按用户要求添加教师原版拨弦视频：每日技巧页集中放握拨片、连续下拨、交替拨、掌根闷音；诊断页按任务展开。使用响应式 YouTube 嵌入、不自动播放、保留原视频链接与中文观察任务；视频观看时间不计入 15 分钟拿琴训练。来源见 `research/picking-video-demos.md`。
+- 同日复查后补齐 Phase A 的训练闭环：基线测速不再循环依赖未知的诊断值；每日页增加 E5/A5 指法图、未弹弦制音、单弦到跨弦阶梯、常见错误与完成标准。目标 riff 未经授权谱核实前，最后 2 分钟改为录音回听。记录表允许非 BPM 项目和非跟弹项目留空，校验尝试/干净次数，标记目标与时间区间，并支持不影响诊断的单条删除。已保存诊断会在重载后恢复；视频改为点击后加载，网络失败时仍保留原链接。

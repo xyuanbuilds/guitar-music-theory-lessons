@@ -1,0 +1,38 @@
+/* Lessons 4: quiet additions to the original warm paper course. */
+.workshop-meta { color: var(--ink-soft); font-size: .85rem; }
+.workshop-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem; padding: 1.3rem 0; border-top: 1px solid var(--rule); }
+.workshop-list { list-style: none; padding: 0; }
+.workshop-list li { padding: .9rem 0; border-bottom: 1px solid var(--rule); }
+.workshop-list a { display: block; font-size: 1.05rem; }
+.workshop-list small { display: block; color: var(--ink-soft); }
+.workshop-number { font-variant-numeric: tabular-nums; color: var(--accent); margin-right: .6rem; }
+.worksheet { padding: 1.2rem; border: 1px solid var(--rule); background: var(--paper-raised); border-radius: 6px; }
+.worksheet label { display: block; margin: 1rem 0 .35rem; }
+.worksheet input, .worksheet textarea { display: block; width: 100%; min-width: 0; font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; padding: .55rem; }
+.worksheet textarea { min-height: 6rem; resize: vertical; }
+.workshop-actions { display: flex; gap: .65rem; flex-wrap: wrap; margin: 1rem 0; }
+.workshop-actions button { font: inherit; font-size: .85rem; padding: .5rem .8rem; border: 1px solid var(--accent); color: var(--accent); background: var(--paper); border-radius: 4px; cursor: pointer; }
+.workshop-status, .workshop-progress { color: var(--ink-soft); font-size: .8rem; }
+.workshop-progress label { display: block; margin: .6rem 0; }
+.workshop-progress input { margin-right: .5rem; }
+.workshop-progress { margin: 1.6rem 0; padding: 1rem 0; border-top: 1px dashed var(--rule); }
+.lead-sheet { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; background: transparent; padding: 0; }
+.rhythm-fallback { overflow-x: auto; }
+.rhythm-fallback table { font-size: .8rem; }
+.rhythm-fallback td, .rhythm-fallback th { padding: .3rem; white-space: nowrap; }
+.workshop details { margin: 1rem 0; }
+.workshop summary { cursor: pointer; color: var(--accent); }
+.workshop button:focus-visible, .workshop input:focus-visible, .workshop textarea:focus-visible, .workshop summary:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; }
+.workshop .chord-diagram { flex: 0 0 150px; width: 150px; }
+.workshop .chord-diagram svg { display: block; }
+.workshop .chord-diagram small { display: block; font-size: .7rem; color: var(--ink-soft); }
+@media(max-width: 520px) { .worksheet { padding: .8rem; } .workshop .chord-row { gap: .65rem; } .workshop .chord-diagram { flex-basis: 135px; width: 135px; } }
+@media print {
+  .workshop-actions, .workshop-progress, .workshop-nav, .workshop .quiz, .workshop-status { display: none !important; }
+  .worksheet { background: transparent; break-inside: avoid; }
+  .worksheet textarea { border: 0; }
+  .rhythm-fallback { overflow: visible; }
+  .chord-diagram, .lead-sheet { break-inside: avoid; }
+  body.print-work > .page > :not(.workshop-sheet) { display: none !important; }
+  body.print-work .workshop-sheet > :not(h2):not(.lead-sheet) { display: none !important; }
+}
