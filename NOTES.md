@@ -105,3 +105,27 @@
 - 新组件 `assets/technique.css/js` 使用独立 localStorage key `guitar-theory-technique-progress-v1`，仅保存目标、诊断与稳定 BPM 记录；不自动写学习记录。
 - 2026-09-23 按用户要求添加教师原版拨弦视频：每日技巧页集中放握拨片、连续下拨、交替拨、掌根闷音；诊断页按任务展开。使用响应式 YouTube 嵌入、不自动播放、保留原视频链接与中文观察任务；视频观看时间不计入 15 分钟拿琴训练。来源见 `research/picking-video-demos.md`。
 - 同日复查后补齐 Phase A 的训练闭环：基线测速不再循环依赖未知的诊断值；每日页增加 E5/A5 指法图、未弹弦制音、单弦到跨弦阶梯、常见错误与完成标准。目标 riff 未经授权谱核实前，最后 2 分钟改为录音回听。记录表允许非 BPM 项目和非跟弹项目留空，校验尝试/干净次数，标记目标与时间区间，并支持不影响诊断的单条删除。已保存诊断会在重载后恢复；视频改为点击后加载，网络失败时仍保留原链接。
+
+## Lessons 5 · Funk Rhythm Lab（2026-09-24）
+
+- 8 课路线：连续十六分右手 → D9 按实/释放制音 → ghost strum 与 air strum → 2/4 重音和窄扫 → 一小节切分 → D9/E9 两品移位 → 问答与留白 → 16 小节录音。
+- 与 Lessons 4 的边界：Lessons 4 负责时值、空扫、止音等概念和写歌用途；Lessons 5 只发展 Funk 的电吉他执行层，不把创建课程视作用户已掌握。
+- 新组件 `assets/funk.css/js`：每个十六分格固定显示拨向、动作和重音；“单步”同时展示左手压力状态与右手是否触弦；播放时先预备一小节，并用合成短音/噪声区分和弦、制音与空扫。它不录音、不评分，也不能模拟真实拨片与琴弦反馈。
+- 新和弦使用 D9 `x5455x` 与 E9 `x7677x`，均配 `chord-diagram.js` 指板图和科学音名表。用户手上仍是新手，因此速度从 45–60 BPM 起，换位给出 4& 止音、4a 移动的明确窗口。
+- 自评进度使用独立 key `guitar-theory-lessons5-progress-v1`；真正过关证据是带日期与稳定 BPM 的录音及隔日复弹。
+
+## Lessons 6 · Fusion Guitar Lab（2026-09-24）
+
+- 研究先行：`research/fusion-sources.md` 以 NEA Jazz Masters、Berklee 官方课程大纲和 U.S. Copyright Office 为主要依据，明确 Fusion 是爵士过程、groove 来源、电声声音与现代写作的可变组合，不是固定音阶。
+- 8 课核心：定义/Straight A-B → 十六分中的单音空间 → 五声动机 → Em7–A7 落点 → 一枚 Dorian 6 → bend/vibrato/gain → E7 #9 解决 → 16 小节原创 solo。
+- 2 课扩展：`7/8 = 2+2+3` 和 A Lydian ♭7 的 `#11 → 5`。它们被明确标为扩展，不代表 Fusion 门槛。
+- 新组件 `assets/fusion.css/js` 用独立 key `guitar-theory-lessons6-progress-v1`；播放器支持 8/16 格、7/8 分组、示范/伴奏、Straight/Swing 对比与 Clean/Edge 合成参照。它不监听、不评分、不模拟真实放大器。
+- `fretboard-visual.js` 新增 10 套 Fusion 指板图；每个具体把位页同时保留 1–6 弦为行、品格为列的科学音名表。
+- 和声、旋律、groove 与合成伴奏均为本项目原创，不转写商业录音。学习证据仍等待用户录音与隔日复弹。
+
+### Jazz → Fusion 衔接修订（2026-09-24）
+
+- 新增 `lessons6/jazz-to-fusion.html`：能力对照、三项控制变量实验、两种“解决”的区别、穿插学习路线和共同录音检查表；Jazz 与 Fusion 目录双向链接。
+- Fusion 全部 10 课新增对应爵士课的解释和迁移任务；明确课程偏重不等于流派边界，保留独立自评进度。
+- 修正第 1 课缺少弱拍发声导致 Swing/Straight 听感无法对比；第 4 课目标音统一落第 1 拍；第 5 课保留原五声位置只增加 C#5；第 10 课 A Lydian Dominant 的母音阶改为 E 爵士旋律小调。
+- 第 8 课改为真正的 16 小节完整伴奏，和弦为 Em7×4｜Em7–A7–Em7–A7｜Em7×4｜E7–E7–Em7–Em7。预备一小节后播放一次自动停止；第 4、12 小节第 3–4 拍固定留白，作品沿用 Jazz 15 的动机/落点/张力/录音修订标准。

@@ -2,6 +2,30 @@
 
 ## Knowledge
 
+### Jazz Fusion 电吉他 · Lessons 6（2026-09-24 阅读核对）
+
+- [NEA Jazz Masters: Miles Davis](https://www.arts.gov/honors/jazz/miles-davis)、[Herbie Hancock](https://www.arts.gov/honors/jazz/herbie-hancock)；[Berklee Online: Gary Burton Jazz Improvisation](https://online.berklee.edu/courses/gary-burton-jazz-improvisation)
+  用 Miles Davis 的 electric jazz 转向、Gary Burton 对 Rock 节奏/音色与 Jazz 即兴/和声复杂度的结合，以及 Herbie Hancock 的电键盘路径交叉定义 Fusion。“四个可变旋钮”是本项目的教学归纳，不是唯一学术定义。
+- [Berklee: Funk/Rock and R&amp;B Guitar Soloing](https://online.berklee.edu/courses/funk-rock-and-r-b-guitar-soloing)、[Guitar Improvisation Techniques](https://online.berklee.edu/courses/guitar-improvisation-techniques)、[Rhythm and Groove Guitar](https://online.berklee.edu/courses/rhythm-and-groove-guitar)
+  支撑“minor pentatonic → 和弦音/导向音 → 单一 modal color”的顺序，以及 groove、muting、syncopation、bends、legato 和动态发音的优先级。
+- [Berklee: Getting Your Guitar Sound](https://online.berklee.edu/courses/getting-your-guitar-sound)、[Time and Rhythm 1](https://online.berklee.edu/courses/time-and-rhythm-1)、[Jazz Guitar 201](https://online.berklee.edu/courses/jazz-guitar-201-advanced-jazz-guitar-improvisation)
+  用于信号链单变量 A/B、先稳定基础细分再进入 5/7/9 复杂拍，以及把 melodic minor、altered、diminished 放在进阶而非入门主线。
+- [U.S. Copyright Office Circular 56](https://www.copyright.gov/circs/circ56.pdf)、[Circular 33](https://www.copyright.gov/circs/circ33.pdf)
+  用于区分作品/录音与方法/具体表达。Lessons 6 的所有短句、vamp、伴奏和可视化均独立创作，不使用可辨识艺人 lick 或商业录音。完整研究笔记见 [fusion-sources.md](research/fusion-sources.md)。
+
+合成播放器只核对拍点、音高、落点和分组；Clean/Edge 不代表真实功放，bend 页面不监听输入，不得把页面播放或自评记录写成演奏掌握。
+
+### Funk 节奏吉他 · Lessons 5（2026-09-24）
+
+- [musictheory.net: Note Duration](https://www.musictheory.net/lessons/11)、[Measures and Time Signature](https://www.musictheory.net/lessons/12)、[Rest Duration](https://www.musictheory.net/lessons/13)
+  用于核对 4/4、十六分细分与休止时值。`1↓ e↑ &↓ a↑` 是本课程用于建立稳定交替扫弦的练习动作，不被写成所有 Funk 演奏的唯一拨向。
+- [JustinGuitar: Strumming Mechanics](https://www.justinguitar.com/guitar-lessons/strumming-mechanics-b1-204)、[Palm Muting](https://www.justinguitar.com/guitar-lessons/palm-muting-bg-1203)
+  用于放松、拨片角度、触弦深度和掌侧止音的保守动作原则。Lessons 5 的重点是左手释放压力产生的制音扫弦；它与靠琴桥保留音高的 palm mute 明确分开。
+- [本课程：节奏动作参考卡](reference/0016-rhythm-actions.html)、[干净与稳定 BPM](reference/0018-clean-tempo-protocol.html)
+  统一 ghost strum / air strum / 主动止音的动作结果与 +4 / −8 速度阶梯。D9–E9 和弦指型、所有 groove、问答结构与 16 小节项目均为本课程原创，不转写商业录音。
+
+合成播放器只核对十六分位置和动作类别，不模拟真实 Funk 音色、拨片回弹或人类 microtiming。风格判断仍需要听真实乐队录音，并结合用户自己的手机录音或教师反馈。
+
 ### ACG Riff · Songbook / Technique（2026-09-23 阅读核对）
 
 - 拨弦视频演示（2026-09-23 核对作者、标题、官方章节与 oEmbed）：[JustinGuitar · 握拨片](https://www.youtube.com/watch?v=-04Et5qIoa4&t=231s)、[JustinGuitar · 交替拨](https://www.youtube.com/watch?v=q8SHmo1-dac&t=43s)、[JustinGuitar · 掌根闷音](https://www.youtube.com/watch?v=5H7Q6dSxuQc&t=90s)，以及下方 The-Art-of-Guitar 下拨视频。
@@ -95,6 +119,8 @@
   JustinGuitar 课程自带的学习者社区，按 Grade/Module 分区，适合按自己所在的课程进度提问、找同水平的人一起打卡。
 
 ## Gaps
+
+- Lessons 5 尚无用户演奏录音；当前无法判断右手是否放松、制音是否真的无音高、重音是否导致抢拍，或 D9 小横按是否适合其手型。页面动画与合成试听不能替代侧面视频、录音和真人反馈。
 
 - 《青春コンプレックス》的目标 riff 尚待用户在 Aniplex 完整发行录音中确认；曲式时间戳、riff 变体、BPM、调性、把位与双吉他声部仍需授权谱和听辨共同核实。BPM 日志是自评，不是教师反馈。
 
