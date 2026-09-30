@@ -2,7 +2,7 @@
   'use strict';
   if (!window.FretboardVisual && document.querySelector('[data-fingering-set]')) {
     var fingeringScript = document.createElement('script');
-    fingeringScript.src = '../assets/fretboard-visual.js?v=2';
+    fingeringScript.src = '../assets/fretboard-visual.js?v=3';
     document.head.appendChild(fingeringScript);
   }
   var KEY = 'guitar-theory-lessons3-progress-v1';
@@ -73,7 +73,7 @@
   function midi(note) {
     var match = /^([A-G])([#b]?)(-?\d+)$/.exec(note);
     if (!match) throw new Error('无效音名：' + note);
-    return 12 * (Number(match[3]) + 1) + { C:0,D:2,E:4,F:5,G:7,A:9,B:11 }[match[1]] + (match[2] === '#' ? 1 : match[2] === 'b' ? -1 : 0);
+    return 12 * (Number(match[3]) + 1) + { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 }[match[1]] + (match[2] === '#' ? 1 : match[2] === 'b' ? -1 : 0);
   }
   function initLab(container, config) {
     var start = container.querySelector('[data-start]');
@@ -89,7 +89,7 @@
       request++; running = false;
       clearInterval(interval); interval = null;
       timers.forEach(clearTimeout); timers.clear();
-      nodes.forEach(function (node) { try { node.stop(); } catch (_) {} node.disconnect(); }); nodes.clear();
+      nodes.forEach(function (node) { try { node.stop(); } catch (_) { } node.disconnect(); }); nodes.clear();
       if (output) { output.disconnect(); output = null; }
       [tempo, feel, mode].forEach(function (input) { input.disabled = false; });
       start.disabled = false; stopButton.disabled = true;
@@ -184,7 +184,10 @@
     var config = JSON.parse(data.textContent);
     var quiz = document.querySelector('#quiz');
     if (quiz && window.initQuiz) window.initQuiz(quiz, config.quiz.map(shuffled), { summary: '这是概念检索；是否进入下一课，以录音与隔日复弹标准为准。' });
-    var lab = document.querySelector('[data-lab]');
-    if (lab) initLab(lab, config);
+    document.querySelectorAll('[data-lab]').forEach(function (labEl) {
+      var customKey = labEl.getAttribute('data-lab-key');
+      var labConfig = (customKey && config[customKey]) ? config[customKey] : config;
+      initLab(labEl, labConfig);
+    });
   }
 })();

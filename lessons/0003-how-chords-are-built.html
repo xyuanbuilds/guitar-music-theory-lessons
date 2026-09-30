@@ -1,98 +1,467 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<title>Lesson 3 · 和弦是怎么"叠"出来的</title>
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <title>Lesson 3 · 和弦是怎么"叠"出来的</title>
+  <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-<div class="page">
+  <div class="page">
 
-  <header class="lesson-header">
-    <div class="kicker">Unit B · 基础和弦与手上功夫 · Lesson 3 / 13</div>
-    <h1>和弦是怎么"叠"出来的</h1>
-    <p class="subtitle">你已经会弹 E、Am、D 三个和弦的手型了。这一课不加新手型，而是搞懂这些手型背后按的到底是哪几个音、为什么有的听着"稳"、有的听着"忧郁"——这是将来自己拼和弦、写歌不用死记手型的关键。</p>
-  </header>
+    <header class="lesson-header">
+      <div class="kicker">Unit B · 基础和弦与手上功夫 · Lesson 3 / 13</div>
+      <h1>和弦是怎么"叠"出来的</h1>
+      <p class="subtitle">你已经会弹 E、Am、D 三个和弦的手型了。这一课不加新手型，而是搞懂这些手型背后按的到底是哪几个音、为什么有的听着"稳"、有的听着"忧郁"——这是将来自己拼和弦、写歌不用死记手型的关键。
+      </p>
+    </header>
 
-  <nav class="crumbs">上一课：<a href="0002-first-open-chords-e-am-d.html">你的第一批开放和弦</a> ・ 参考卡：<a href="../reference/0002-triad-formulas.html">三和弦公式</a></nav>
+    <nav class="crumbs">上一课：<a href="0002-first-open-chords-e-am-d.html">你的第一批开放和弦</a> ・ 参考卡：<a
+        href="../reference/0002-triad-formulas.html">三和弦公式</a></nav>
 
-  <h2>三和弦：三个音，叠出一个和弦</h2>
-  <p>
-    一个最基本的和弦（三和弦，triad）由 3 个音组成：<strong>根音（Root）</strong>、<strong>三音（3rd）</strong>、<strong>五音（5th）</strong>。
-    根音决定这个和弦"姓什么"（叫 E 和弦还是 D 和弦），三音决定它是"大三和弦"还是"小三和弦"（也就是听感上明亮还是忧郁），五音负责撑住稳定感。
-  </p>
+    <h2>三和弦：三个音，叠出一个和弦</h2>
+    <p>
+      一个最基本的和弦（三和弦，triad）由 3 个音组成：<strong>根音（Root）</strong>、<strong>三音（3rd）</strong>、<strong>五音（5th）</strong>。
+      根音决定这个和弦"姓什么"（叫 E 和弦还是 D 和弦），三音决定它是"大三和弦"还是"小三和弦"（也就是听感上明亮还是忧郁），五音负责撑住稳定感。
+    </p>
 
-  <h2>不用会大调音阶，靠数半音就能拼出三和弦</h2>
-  <p>Lesson 1 你已经练过"每往右一品升半音"。三和弦的公式就是把这个技能直接用在数音上，不需要先学完整的大调音阶：</p>
+    <div class="callout tip">
+      <span class="callout-label">和弦命名小常识：为什么叫 Am？"m" 是什么意思？</span>
+      在和弦记谱中，<strong>小写字母 "m" 是英文 Minor（小调 / 小三度）的缩写</strong>：
+      <ul style="margin: 0.4rem 0 0.2rem 1.2rem; padding: 0;">
+        <li><strong>A</strong>：代表和弦的<strong>根音是 A</strong>。</li>
+        <li><strong>m</strong>：代表它是 <strong>Minor（小三和弦）</strong>，因为根音与三音之间是<strong>小三度（Minor 3rd，相隔 3 个半音）</strong>。
+        </li>
+      </ul>
+      <strong>记谱惯例：</strong>
+      <strong>大和弦是默认地位</strong>，一般直接省略大写 "M"（比如只写字母 <strong>A</strong>、<strong>E</strong>、<strong>D</strong>，大家都默认是 A
+      大和弦、E 大和弦、D 大和弦）；
+      而只有在它是<strong>小和弦</strong>时，才必须明确加上小写 <strong>m</strong>（如
+      <strong>Am</strong>、<strong>Em</strong>、<strong>Dm</strong>）。
+    </div>
 
-  <table>
-    <thead><tr><th>类型</th><th>根音</th><th>三音</th><th>五音</th></tr></thead>
-    <tbody>
-      <tr><td>大三和弦</td><td class="root">R</td><td>R + 4 半音</td><td>R + 7 半音</td></tr>
-      <tr><td>小三和弦</td><td class="root">R</td><td>R + 3 半音</td><td>R + 7 半音</td></tr>
-    </tbody>
-  </table>
+    <h2>三音五音是几度？大三度与小三度怎么区分</h2>
+    <p>
+      所谓的"几音"，本质上指的就是<strong>音程（Interval，音与音之间的距离度数）</strong>，以根音为 1 度算起：
+    </p>
+    <ul>
+      <li><strong>三音 = 3 度音</strong>：根据距离根音的半音多少，分为两种关键三度：
+        <ul>
+          <li><strong>大三度（Major 3rd，记作 3）</strong>：距离根音 <strong>4 个半音（吉他上跨 4 品）</strong>。色彩明亮、安定、开心。</li>
+          <li><strong>小三度（Minor 3rd，记作 ♭3）</strong>：距离根音 <strong>3 个半音（吉他上跨 3 品）</strong>。色彩忧伤、柔和、暗淡。</li>
+        </ul>
+      </li>
+      <li><strong>五音 = 纯五度音（Perfect 5th，记作 5）</strong>：距离根音 <strong>7 个半音（吉他上跨 7
+          品）</strong>。无论在大三和弦还是小三和弦中，五度音的跨度完全一样，是撑起和弦最稳固的"骨架"。</li>
+    </ul>
 
-  <div class="callout tip">
-    <span class="callout-label">唯一要记的核心</span>
-    五音的位置（+7 半音）大三小三完全一样。<strong>大小三和弦只差三音这一个音，而且只差半音</strong>（+4 还是 +3）。
-    这跟你在和弦文档里见过的"三和弦免横按指型"是同一个道理：大小三和弦的指型往往只差一根手指挪半音。
+    <div class="callout tip">
+      <span class="callout-label">为什么叫"纯五度"？有"大五度"这种说法吗？</span>
+      <strong>乐理中没有"大五度"的说法，只有"增五度（Augmented 5th）"。</strong><br>
+      音程在命名上有两大血统家族，互不串门：
+      <ul style="margin: 0.4rem 0 0.2rem 1.2rem; padding: 0;">
+        <li><strong>纯音程家族（1、4、5、8 度）</strong>：声学上泛音重合度极高、极其纯净融合。只论"纯 / 增 / 减"（减五度 ♭5 ↔ 纯五度 5 ↔ 增五度 ♯5）。</li>
+        <li><strong>大小音程家族（2、3、6、7 度）</strong>：具有鲜明的调式色彩倾向。只论"大 / 小 / 增 / 减"（如小三度 ♭3 ↔ 大三度 3）。</li>
+      </ul>
+    </div>
+
+    <h3>知识拓展：12 半音音程速查全表（Intervals Table）</h3>
+    <p>从根音出发，指板上每多走一品（一个半音），对应精确的中英文音程名称与度数缩写：</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>半音数</th>
+          <th>吉他品格跨度</th>
+          <th>中文音程名称</th>
+          <th>英文名称（English）</th>
+          <th>度数缩写</th>
+          <th>C 出发示例</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>0 品</td>
+          <td>纯一度</td>
+          <td>Perfect Unison</td>
+          <td class="root">P1 / 1</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1 品</td>
+          <td>小二度</td>
+          <td>Minor 2nd</td>
+          <td>m2 / ♭2</td>
+          <td>D♭</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2 品</td>
+          <td>大二度</td>
+          <td>Major 2nd</td>
+          <td>M2 / 2</td>
+          <td>D</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>3 品</td>
+          <td><strong>小三度</strong></td>
+          <td><strong>Minor 3rd</strong></td>
+          <td><strong>m3 / ♭3</strong></td>
+          <td>E♭</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>4 品</td>
+          <td><strong>大三度</strong></td>
+          <td><strong>Major 3rd</strong></td>
+          <td><strong>M3 / 3</strong></td>
+          <td>E</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>5 品</td>
+          <td>纯四度</td>
+          <td>Perfect 4th</td>
+          <td>P4 / 4</td>
+          <td>F</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>6 品</td>
+          <td>增四度 / 减五度（三全音）</td>
+          <td>Augmented 4th / Diminished 5th (Tritone)</td>
+          <td>♯4 / ♭5</td>
+          <td>F♯ / G♭</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>7 品</td>
+          <td><strong>纯五度</strong></td>
+          <td><strong>Perfect 5th</strong></td>
+          <td><strong>P5 / 5</strong></td>
+          <td>G</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>8 品</td>
+          <td>增五度 / 小六度</td>
+          <td>Augmented 5th / Minor 6th</td>
+          <td>♯5 (aug5) / ♭6</td>
+          <td>G♯ / A♭</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>9 品</td>
+          <td>大六度</td>
+          <td>Major 6th</td>
+          <td>M6 / 6</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>10 品</td>
+          <td>小七度</td>
+          <td>Minor 7th</td>
+          <td>m7 / ♭7</td>
+          <td>B♭</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>11 品</td>
+          <td>大七度</td>
+          <td>Major 7th</td>
+          <td>M7 / 7</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>12 品</td>
+          <td>纯八度</td>
+          <td>Perfect Octave</td>
+          <td class="root">P8 / 8</td>
+          <td>C</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>不用会大调音阶，靠数半音就能拼出三和弦</h2>
+    <p>Lesson 1 你已经练过"每往右一品升半音"。三和弦的公式就是把这个技能直接用在数音上，不需要先学完整的大调音阶：</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>类型</th>
+          <th>根音（1度）</th>
+          <th>三音（3度）</th>
+          <th>五音（5度）</th>
+          <th>音程度数构成</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>大三和弦（Major）</td>
+          <td class="root">R</td>
+          <td>R + 4 半音（大三度）</td>
+          <td>R + 7 半音（纯五度）</td>
+          <td>1 – 3 – 5</td>
+        </tr>
+        <tr>
+          <td>小三和弦（Minor）</td>
+          <td class="root">R</td>
+          <td>R + 3 半音（小三度）</td>
+          <td>R + 7 半音（纯五度）</td>
+          <td>1 – ♭3 – 5</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <span class="callout-label">唯一要记的核心</span>
+      五音的位置（纯五度，+7 半音）大三小三完全一样。<strong>大小三和弦只差三音这一个音，而且只差半音</strong>（大三度 +4 还是小三度 +3）。
+      这跟你在和弦文档里见过的"三和弦免横按指型"是同一个道理：大小三和弦的指型往往只差一根手指挪半音。
+    </div>
+
+    <h2>用你已经会弹的三个和弦验证一遍</h2>
+    <p>数一下 12 音循环表：<span class="mono">C – C# – D – D# – E – F – F# – G – G# – A – A# – B</span>（数到头绕回 C）。</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>和弦</th>
+          <th>根音（1度）</th>
+          <th>三音（3度）</th>
+          <th>五音（5度）</th>
+          <th>度数分析</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>E（大三和弦）</td>
+          <td>E</td>
+          <td>G#（E 往后数 4 个半音）</td>
+          <td>B（E 往后数 7 个半音）</td>
+          <td>根音 E + 大三度 G# + 纯五度 B</td>
+        </tr>
+        <tr>
+          <td>Am（小三和弦）</td>
+          <td>A</td>
+          <td>C（A 往后数 3 个半音）</td>
+          <td>E（A 往后数 7 个半音）</td>
+          <td>根音 A + 小三度 C + 纯五度 E</td>
+        </tr>
+        <tr>
+          <td>D（大三和弦）</td>
+          <td>D</td>
+          <td>F#（D 往后数 4 个半音）</td>
+          <td>A（D 往后数 7 个半音）</td>
+          <td>根音 D + 大三度 F# + 纯五度 A</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>实际在吉他上怎么按？六根弦的逐弦拆解</h2>
+    <p>
+      吉他上的和弦手型通常会有 4 到 6 根弦在发声，但三和弦明明只有 3 个音，多出来的弦在弹什么？
+      答案是：<strong>同一个音会在不同的八度或弦上重复出现</strong>（比如根音可能出现 2 次，五音出现 2 次）。
+    </p>
+
+    <h3>1. 按法对照：手指标记（按哪根手指） vs 音名标记（对应哪个音）</h3>
+    <p>
+      我们先以 <strong>E 和弦（E – G# – B）</strong> 为例，把<strong>指法手型图</strong>与<strong>实按音名图</strong>并排对照：
+      左边是按法（圈内是手指编号 1、2、3），右边是实按音名（圈内是具体按出来的音名，最下方标出了该弦在和弦里的度数角色：<strong>1 根音、3 大三度、5 纯五度</strong>）：
+    </p>
+
+    <div class="chord-row" style="flex-wrap: wrap;">
+      <div>
+        <div id="chord-E-finger"></div>
+        <p style="text-align: center; font-size: 0.85rem; margin-top: 0.4rem; color: var(--ink-soft);">E 和弦：指法（手指号）</p>
+      </div>
+      <div>
+        <div id="chord-E-notes"></div>
+        <p style="text-align: center; font-size: 0.85rem; margin-top: 0.4rem; color: var(--ink-soft);">E 和弦：音名与度数对照</p>
+      </div>
+    </div>
+
+    <p>
+      同理，看看 <strong>Am 和弦（A – C – E）</strong> 与 <strong>D 和弦（D – F# – A）</strong> 的音名与度数在指板手型上的实际对应：
+    </p>
+
+    <div class="chord-row" style="flex-wrap: wrap;">
+      <div>
+        <div id="chord-Am-notes"></div>
+        <p style="text-align: center; font-size: 0.85rem; margin-top: 0.4rem; color: var(--ink-soft);">Am 和弦：音名与度数</p>
+      </div>
+      <div>
+        <div id="chord-D-notes"></div>
+        <p style="text-align: center; font-size: 0.85rem; margin-top: 0.4rem; color: var(--ink-soft);">D 和弦：音名与度数</p>
+      </div>
+    </div>
+
+    <h3>2. 六根弦逐弦对照表（手型、品格、音名与度数）</h3>
+    <p>对照上面的图形，看这三个手型在每一根弦上的具体分布：</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>弦（从低到高）</th>
+          <th>E 和弦（按法与构成）</th>
+          <th>Am 和弦（按法与构成）</th>
+          <th>D 和弦（按法与构成）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>6 弦（E）</strong></td>
+          <td>0品 空弦 = <strong>E2（根音 1）</strong></td>
+          <td>× 闷音不弹</td>
+          <td>× 闷音不弹</td>
+        </tr>
+        <tr>
+          <td><strong>5 弦（A）</strong></td>
+          <td>2品 2指按 = <strong>B2（五音 5）</strong></td>
+          <td>0品 空弦 = <strong>A2（根音 1）</strong></td>
+          <td>× 闷音不弹</td>
+        </tr>
+        <tr>
+          <td><strong>4 弦（D）</strong></td>
+          <td>2品 3指按 = <strong>E3（根音 1）</strong></td>
+          <td>2品 2指按 = <strong>E3（五音 5）</strong></td>
+          <td>0品 空弦 = <strong>D3（根音 1）</strong></td>
+        </tr>
+        <tr>
+          <td><strong>3 弦（G）</strong></td>
+          <td>1品 1指按 = <strong>G#3（三音 3，大三度）</strong></td>
+          <td>2品 3指按 = <strong>A3（根音 1）</strong></td>
+          <td>2品 1指按 = <strong>A3（五音 5）</strong></td>
+        </tr>
+        <tr>
+          <td><strong>2 弦（B）</strong></td>
+          <td>0品 空弦 = <strong>B3（五音 5）</strong></td>
+          <td>1品 1指按 = <strong>C4（三音 ♭3，小三度）</strong></td>
+          <td>3品 3指按 = <strong>D4（根音 1）</strong></td>
+        </tr>
+        <tr>
+          <td><strong>1 弦（e）</strong></td>
+          <td>0品 空弦 = <strong>E4（根音 1）</strong></td>
+          <td>0品 空弦 = <strong>E4（五音 5）</strong></td>
+          <td>2品 2指按 = <strong>F#4（三音 3，大三度）</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <span class="callout-label">从按法看本质：为什么 E 和弦是大的，Am 和弦是小的？</span>
+      <ul>
+        <li>看 <strong>E 和弦</strong>的 3 弦 1 品：按出来是 <strong>G#</strong>，它距离根音 E 正好是 <strong>大三度（4 半音）</strong>，所以赋予了 E
+          和弦明亮宏亮的大调色彩。</li>
+        <li>看 <strong>Am 和弦</strong>的 2 弦 1 品：按出来是 <strong>C</strong>，它距离根音 A 正好是 <strong>小三度（3 半音）</strong>，所以赋予了 Am
+          和弦忧伤柔和的小调色彩。</li>
+      </ul>
+      手型上的每一个手指都不是凭空安排的，都是为了凑齐"根音 + 三音 + 五音"这三块拼图！
+    </div>
+
+    <h2>大师视角：乔伊（Troy Stetina）吉他体系是如何理解这里的？</h2>
+    <p>
+      摇滚/金属吉他大师<strong>特洛伊·斯泰蒂纳（Troy Stetina，国内常称"乔伊"）</strong>在其经典教材《重金属节奏/主音吉他教程》（<em>Heavy Metal Rhythm/Lead
+        Guitar</em>）与《指板掌控》（<em>Fretboard Mastery</em>）中，对三度、五度和弦结构的讲解极具<strong>实战性与几何直觉</strong>：
+    </p>
+
+    <ul>
+      <li>
+        <strong>1. 先剥离三度，靠"纯五度"建立力量（Power Chords / 5和弦）</strong><br>
+        在乔伊的节奏教程开篇，新手弹的不是大三或小三和弦，而是<strong>力量和弦（5和弦，如 E5、A5）</strong>——只保留<strong>根音（1）+ 纯五度（5）</strong>。
+        乔伊指出：失真（Distortion）高增益下三度音会产生相互干扰的泛音碰撞，听起来容易浑浊；而<strong>纯五度（7 半音）在物理声学上极其纯净坚固</strong>，是摇滚和现代流行音乐最有力、最清晰的和声地基。
+      </li>
+      <li>
+        <strong>2. 三度音是情绪的"明暗开关"（Mood Switch）</strong><br>
+        当引入三度音时，乔伊强调整体骨架（根音与纯五度）是不变的，<strong>"大三度（4 半音）"与"小三度（3
+          半音）"只差一品（半音）</strong>。这短短的一个半音，就像一个情绪开关：往前一品是明亮昂扬的英雄史诗，往后一品就是黑暗低沉的忧郁反派。
+      </li>
+      <li>
+        <strong>3. 指板上的几何相对手型（Relative Shapes）</strong><br>
+        乔伊极力主张吉他手不用死背五线谱，而是形成肌肉与视觉上的<strong>几何箱型直觉</strong>：
+        在低音弦上，根音确定后，它的<strong>纯五度永远在"相邻细弦 + 2 品"</strong>（例如 6 弦 0 品的五度在 5 弦 2 品；6 弦 5 品的五度在 5 弦 7
+        品）。只要记住这个跨弦指型几何模板，指板上的任何和弦与琶音都能瞬间定位。
+      </li>
+    </ul>
+
+    <div class="callout practice">
+      <span class="callout-label">动手验证（连上 Lesson 1 的指板技能）</span>
+      弹 E 和弦时，<strong>6 弦空弦</strong>按 Lesson 1 的方法是什么音？——应该正好是根音 E。
+      再看 <strong>5 弦 2 品</strong>——按半音数出来应该是 B，也就是五音。指型不是随便按的，每一根弦按的都是三和弦里的某个音（有些音会重复出现在不同弦上）。
+    </div>
+
+    <div class="callout source">
+      <span class="callout-label">想再交叉验证一遍</span>
+      <a href="https://www.musictheory.net/lessons/40" target="_blank" rel="noopener">musictheory.net · Triads</a>
+      用键盘图示范了同样的"数半音拼三和弦"过程，跟这里讲法一致，换个媒介看一遍有助于记牢。
+    </div>
+
+    <h2>检验一下</h2>
+    <p>前 5 题练"数半音拼三和弦"这个新技能，后 4 题混了 Lesson 1、2 的旧内容——间隔重复，别让手上和指板的记忆掉线。</p>
+
+    <div class="quiz" id="quiz-3"></div>
+
+    <h2>下一课</h2>
+    <p>
+      你现在能自己拼出任意根音的大三/小三和弦了。要把这些和弦放回"一个调"里，还差一块拼图：什么是"调"。
+      <a href="0004-major-scale-relative-minor.html">下一课</a> 先讲大调音阶，之后才是"一个调里天然长出 7 个和弦"这个正题。
+    </p>
+
+    <div class="ask-teacher">
+      数半音数错、或者想再多练几组根音的三和弦公式，随时问你的 AI 老师，可以现场再出几组题。
+    </div>
+
   </div>
 
-  <h2>用你已经会弹的三个和弦验证一遍</h2>
-  <p>数一下 12 音循环表：<span class="mono">C – C# – D – D# – E – F – F# – G – G# – A – A# – B</span>（数到头绕回 C）。</p>
+  <script src="../assets/chord-diagram.js"></script>
+  <script src="../assets/quiz.js"></script>
+  <script>
+    // E 和弦：左边手指号，右边实际音名与度数
+    renderChordDiagram(document.getElementById('chord-E-finger'), {
+      name: 'E (指法)', baseFret: 1,
+      frets: [0, 2, 2, 1, 0, 0],
+      fingers: [null, 2, 3, 1, null, null]
+    });
+    renderChordDiagram(document.getElementById('chord-E-notes'), {
+      name: 'E (音名与度数)', baseFret: 1,
+      frets: [0, 2, 2, 1, 0, 0],
+      labels: [null, 'B', 'E', 'G#', null, null],
+      bottomLabels: ['1', '5', '1', '3', '5', '1'],
+      dotColors: [null, 'var(--accent-2, #3b6e6a)', 'var(--accent, #8a5a3b)', 'var(--good, #3f7d4a)', null, null]
+    });
 
-  <table>
-    <thead><tr><th>和弦</th><th>根音</th><th>三音</th><th>五音</th></tr></thead>
-    <tbody>
-      <tr><td>E（大三和弦）</td><td>E</td><td>G#（E 往后数 4 个）</td><td>B（E 往后数 7 个）</td></tr>
-      <tr><td>Am（小三和弦）</td><td>A</td><td>C（A 往后数 3 个）</td><td>E（A 往后数 7 个）</td></tr>
-      <tr><td>D（大三和弦）</td><td>D</td><td>F#（D 往后数 4 个）</td><td>A（D 往后数 7 个）</td></tr>
-    </tbody>
-  </table>
+    // Am 和弦：音名与度数
+    renderChordDiagram(document.getElementById('chord-Am-notes'), {
+      name: 'Am (音名与度数)', baseFret: 1,
+      frets: ['x', 0, 2, 2, 1, 0],
+      labels: [null, null, 'E', 'A', 'C', null],
+      bottomLabels: ['×', '1', '5', '1', '♭3', '5'],
+      dotColors: [null, null, 'var(--accent-2, #3b6e6a)', 'var(--accent, #8a5a3b)', 'var(--good, #3f7d4a)', null]
+    });
 
-  <div class="callout practice">
-    <span class="callout-label">动手验证（连上 Lesson 1 的指板技能）</span>
-    弹 E 和弦时，<strong>6 弦空弦</strong>按 Lesson 1 的方法是什么音？——应该正好是根音 E。
-    再看 <strong>5 弦 2 品</strong>——按半音数出来应该是 B，也就是五音。指型不是随便按的，每一根弦按的都是三和弦里的某个音（有些音会重复出现在不同弦上）。
-  </div>
+    // D 和弦：音名与度数
+    renderChordDiagram(document.getElementById('chord-D-notes'), {
+      name: 'D (音名与度数)', baseFret: 1,
+      frets: ['x', 'x', 0, 2, 3, 2],
+      labels: [null, null, null, 'A', 'D', 'F#'],
+      bottomLabels: ['×', '×', '1', '5', '1', '3'],
+      dotColors: [null, null, null, 'var(--accent-2, #3b6e6a)', 'var(--accent, #8a5a3b)', 'var(--good, #3f7d4a)']
+    });
 
-  <div class="callout source">
-    <span class="callout-label">想再交叉验证一遍</span>
-    <a href="https://www.musictheory.net/lessons/40" target="_blank" rel="noopener">musictheory.net · Triads</a>
-    用键盘图示范了同样的"数半音拼三和弦"过程，跟这里讲法一致，换个媒介看一遍有助于记牢。
-  </div>
-
-  <h2>检验一下</h2>
-  <p>前 5 题练"数半音拼三和弦"这个新技能，后 4 题混了 Lesson 1、2 的旧内容——间隔重复，别让手上和指板的记忆掉线。</p>
-
-  <div class="quiz" id="quiz-3"></div>
-
-  <h2>下一课</h2>
-  <p>
-    你现在能自己拼出任意根音的大三/小三和弦了。要把这些和弦放回"一个调"里，还差一块拼图：什么是"调"。
-    <a href="0004-major-scale-relative-minor.html">下一课</a> 先讲大调音阶，之后才是"一个调里天然长出 7 个和弦"这个正题。
-  </p>
-
-  <div class="ask-teacher">
-    数半音数错、或者想再多练几组根音的三和弦公式，随时问你的 AI 老师，可以现场再出几组题。
-  </div>
-
-</div>
-
-<script src="../assets/quiz.js"></script>
-<script>
-  initQuiz(document.getElementById('quiz-3'), [
-    { prompt: 'G 大三和弦的三音（G + 4 半音）是？', choices: ['A#', 'B', 'C', 'C#'], answer: 1 },
-    { prompt: 'G 大三和弦的五音（G + 7 半音）是？', choices: ['C#', 'D', 'D#', 'E'], answer: 1 },
-    { prompt: 'D 小三和弦（Dm）的三音（D + 3 半音）是？', choices: ['E', 'F', 'F#', 'G'], answer: 1 },
-    { prompt: '大三和弦和小三和弦，本质区别在哪个音上？', choices: ['根音', '三音', '五音', '根音和五音'], answer: 1 },
-    { prompt: 'E 大三和弦实际的三个音是？', choices: ['E-G-B', 'E-G#-B', 'E-F#-B', 'E-G#-C'], answer: 1 },
-    { prompt: '【复习】5 弦 7 品是哪个音？', choices: ['D#3', 'E3', 'F3', 'D3'], answer: 1 },
-    { prompt: '【复习】E 和弦，6 弦怎么弹？', choices: ['闷音不弹', '空弦弹响', '按 1 品', '按 2 品'], answer: 1 },
-    { prompt: '【复习】Am 和弦比 E 和弦，手型往哪个方向挪了一根弦？', choices: ['往细弦（1 弦）方向', '往粗弦（6 弦）方向', '品格整体上移', '品格整体下移'], answer: 0 },
-    { prompt: '【复习】6 弦 12 品是哪个音？', choices: ['D#3', 'E3', 'F3', 'E2'], answer: 1 }
-  ]);
-</script>
+    initQuiz(document.getElementById('quiz-3'), [
+      { prompt: 'G 大三和弦的三音（G + 4 半音）是？', choices: ['A#', 'B', 'C', 'C#'], answer: 1 },
+      { prompt: 'G 大三和弦的五音（G + 7 半音）是？', choices: ['C#', 'D', 'D#', 'E'], answer: 1 },
+      { prompt: 'D 小三和弦（Dm）的三音（D + 3 半音）是？', choices: ['E', 'F', 'F#', 'G'], answer: 1 },
+      { prompt: '大三和弦和小三和弦，本质区别在哪个音上？', choices: ['根音', '三音', '五音', '根音和五音'], answer: 1 },
+      { prompt: 'E 大三和弦实际的三个音是？', choices: ['E-G-B', 'E-G#-B', 'E-F#-B', 'E-G#-C'], answer: 1 },
+      { prompt: '【复习】5 弦 7 品是哪个音？', choices: ['D#3', 'E3', 'F3', 'D3'], answer: 1 },
+      { prompt: '【复习】E 和弦，6 弦怎么弹？', choices: ['闷音不弹', '空弦弹响', '按 1 品', '按 2 品'], answer: 1 },
+      { prompt: '【复习】Am 和弦比 E 和弦，手型往哪个方向挪了一根弦？', choices: ['往细弦（1 弦）方向', '往粗弦（6 弦）方向', '品格整体上移', '品格整体下移'], answer: 0 },
+      { prompt: '【复习】6 弦 12 品是哪个音？', choices: ['D#3', 'E3', 'F3', 'E2'], answer: 1 }
+    ]);
+  </script>
 </body>
 </html>

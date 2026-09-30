@@ -27,7 +27,7 @@ function renderChordDiagram(container, spec) {
   var baseFret = spec.baseFret || 1;
   var numFretRows = spec.fretRows || 4;
 
-  var W = 160, H = 190;
+  var W = 160, H = spec.bottomLabels ? 210 : 190;
   var left = 24, right = 140;
   var stringX = [];
   for (var s = 0; s < 6; s++) stringX.push(left + (right - left) * s / 5);
@@ -82,9 +82,23 @@ function renderChordDiagram(container, spec) {
     var relFret = v - baseFret + 1; // 1-indexed row within the visible window
     if (relFret < 1 || relFret > numFretRows) continue;
     var cy = nutY + (relFret - 0.5) * fretSpacing;
-    svg += '<circle cx="' + stringX[i3] + '" cy="' + cy + '" r="9" fill="var(--accent, #8a5a3b)"/>';
-    if (fingers[i3]) {
-      svg += '<text x="' + stringX[i3] + '" y="' + (cy + 4) + '" text-anchor="middle" font-size="11" fill="#faf6ee" font-weight="700">' + fingers[i3] + '</text>';
+    var dotColor = (spec.dotColors && spec.dotColors[i3]) ? spec.dotColors[i3] : 'var(--accent, #8a5a3b)';
+    var dotR = (spec.dotRadius) ? spec.dotRadius : 9;
+    svg += '<circle cx="' + stringX[i3] + '" cy="' + cy + '" r="' + dotR + '" fill="' + dotColor + '"/>';
+    var textLabel = (spec.labels && spec.labels[i3] != null) ? spec.labels[i3] : fingers[i3];
+    if (textLabel != null && textLabel !== '') {
+      var fontSize = String(textLabel).length > 2 ? 9 : (String(textLabel).length === 2 ? 10 : 11);
+      svg += '<text x="' + stringX[i3] + '" y="' + (cy + 4) + '" text-anchor="middle" font-size="' + fontSize + '" fill="#faf6ee" font-weight="700">' + textLabel + '</text>';
+    }
+  }
+
+  // bottom string note or degree labels (optional)
+  if (spec.bottomLabels) {
+    for (var bIdx = 0; bIdx < 6; bIdx++) {
+      var bl = spec.bottomLabels[bIdx];
+      if (bl) {
+        svg += '<text x="' + stringX[bIdx] + '" y="' + (lastFretY + 16) + '" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink, #2b2723)">' + bl + '</text>';
+      }
     }
   }
 
