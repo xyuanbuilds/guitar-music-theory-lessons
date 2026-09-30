@@ -71,9 +71,11 @@
     if (counter) counter.textContent = '自评进度：练过 ' + count + ' / 18 · 隔日复弹通过 ' + reviewed + ' / 18。绿色为练过，顶边紫线为复弹通过。';
   }
   function midi(note) {
-    var match = /^([A-G])([#b]?)(-?\d+)$/.exec(note);
+    var match = /^([A-G])([#b♭♯]?)(-?\d+)$/.exec(note);
     if (!match) throw new Error('无效音名：' + note);
-    return 12 * (Number(match[3]) + 1) + { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 }[match[1]] + (match[2] === '#' ? 1 : match[2] === 'b' ? -1 : 0);
+    var acc = match[2];
+    var accVal = (acc === '#' || acc === '♯') ? 1 : ((acc === 'b' || acc === '♭') ? -1 : 0);
+    return 12 * (Number(match[3]) + 1) + { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 }[match[1]] + accVal;
   }
   function initLab(container, config) {
     var start = container.querySelector('[data-start]');
@@ -129,44 +131,56 @@
         tempo.value = bpm;
         var beat = 60 / bpm, ratio = feel.value === 'swing' ? 2 / 3 : .5;
         var demo = mode.value === 'demo';
+        var slotsPerBar = (config.slotsPerBar || (config.phrase && config.phrase[0] && config.phrase[0].length === 16 ? 16 : 8));
+        var slotFactor = slotsPerBar / 8; // 1 for 8 slots (eighth notes), 2 for 16 slots (sixteenth notes)
+        var preSlots = 8 * slotFactor;
         [tempo, feel, mode].forEach(function (input) { input.disabled = true; });
         output = audioContext.createGain(); output.gain.value = Number(volume.value); output.connect(audioContext.destination);
         running = true;
-        var tick = -8, origin = audioContext.currentTime + .1;
+        var tick = -preSlots, origin = audioContext.currentTime + .1;
         function timeAt(slot) {
+          if (slotsPerBar === 16) {
+            return origin + (slot + preSlots) * (beat / 4);
+          }
           return origin + (Math.floor((slot + 8) / 2) + ((slot + 8) % 2 ? ratio : 0)) * beat;
         }
         function schedule() {
           if (!running) return;
           while (timeAt(tick) < audioContext.currentTime + .12) {
             var when = timeAt(tick);
-            var pre = tick < 0, local = pre ? tick + 8 : tick % (config.chords.length * 8);
-            var bar = Math.floor(local / 8), slot = local % 8;
-            if (slot % 2 === 0) {
+            var pre = tick < 0;
+            var local = pre ? tick + preSlots : tick % (config.chords.length * slotsPerBar);
+            var bar = Math.floor(local / slotsPerBar);
+            var slot = local % slotsPerBar;
+            var beatSlot = slotsPerBar === 16 ? (slot % 4 === 0) : (slot % 2 === 0);
+            var beatNumber = slotsPerBar === 16 ? Math.floor(slot / 4) + 1 : Math.floor(slot / 2) + 1;
+            if (beatSlot) {
               tone(slot === 0 ? 91 : 84, when, .035, .08);
               if (!pre) {
                 var chord = config.chords[bar];
-                if (slot === 0 || slot === 4) tone(midi(chord.bass), when, beat * .7, .22, 'triangle');
+                var bassSlot = slotsPerBar === 16 ? (slot === 0 || slot === 8) : (slot === 0 || slot === 4);
+                if (bassSlot) tone(midi(chord.bass), when, beat * .7, .22, 'triangle');
                 if (slot === 0) chord.voices.forEach(function (note) { tone(midi(note), when, beat * 3.6, .075); });
               }
             }
-            if (!pre && demo && config.phrase) {
+            if (!pre && demo && config.phrase && config.phrase[bar]) {
               var note = config.phrase[bar][slot];
-              if (note !== '·' && note !== '—') {
+              if (note && note !== '·' && note !== '—') {
                 var end = slot + 1;
-                while (end < 8 && config.phrase[bar][end] === '—') end++;
-                tone(midi(note), when, Math.max(.04, (timeAt(tick + end - slot) - when) * .9), .18, 'triangle');
+                while (end < slotsPerBar && config.phrase[bar][end] === '—') end++;
+                var noteDur = slotsPerBar === 16 ? Math.max(.02, (end - slot) * (beat / 4) * .85) : Math.max(.04, (timeAt(tick + end - slot) - when) * .9);
+                tone(midi(note), when, noteDur, .18, 'triangle');
               }
             }
-            (function (preparing, barIndex, beatNumber, at) {
+            (function (preparing, barIndex, bNum, at) {
               var timer = setTimeout(function () {
                 timers.delete(timer);
                 if (!running) return;
-                status.textContent = preparing ? '预备 · 第 ' + beatNumber + ' 拍' : '第 ' + (barIndex + 1) + ' / ' + config.chords.length + ' 小节 · ' + config.chords[barIndex].name + ' · 第 ' + beatNumber + ' 拍';
+                status.textContent = preparing ? '预备 · 第 ' + bNum + ' 拍' : '第 ' + (barIndex + 1) + ' / ' + config.chords.length + ' 小节 · ' + config.chords[barIndex].name + ' · 第 ' + bNum + ' 拍';
                 cards.forEach(function (card, i) { card.classList.toggle('active', !preparing && i === barIndex); });
               }, Math.max(0, (at - audioContext.currentTime) * 1000));
               timers.add(timer);
-            })(pre, bar, Math.floor(slot / 2) + 1, when);
+            })(pre, bar, beatNumber, when);
             tick++;
           }
         }
@@ -175,7 +189,8 @@
         stop(); status.textContent = '音频未能启动。可用实体节拍器继续练习；' + error.message;
       }
     });
-    document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); });
+    // only stop if document is actually hidden by switching tabs, not during initial tool checks
+    document.addEventListener('visibilitychange', function () { if (document.hidden && !window.__allowHiddenAudio) stop(); });
     window.addEventListener('pagehide', stop);
   }
   progress();
